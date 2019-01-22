@@ -7,4 +7,5 @@
 ### instalacion npm install -g @angular/cli ###
 ### instalacion npm install ###
 ### instalacion colocan en consola:  ionic cordova prepare ###
+### instalacion colocan en consola:  ionic serve ###
 
