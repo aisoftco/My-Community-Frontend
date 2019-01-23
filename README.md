@@ -32,6 +32,10 @@ luego el siguiente comando :
 ![](/IMG_GROUP/angular.png)
 
 
+
+
+
+
 ![](/IMG_GROUP/angularpage.png)
 
 
@@ -42,6 +46,8 @@ luego el siguiente comando:
 >`$ npm install -g ionic`
 
 ![](/IMG_GROUP/installionic.png)
+
+
 
 
 ![](/IMG_GROUP/ionic.png)
@@ -59,6 +65,11 @@ luego el siguiente comando:
 
 ![](/IMG_GROUP/cordova.png)
 
+
+
+
+
+
 ![](/IMG_GROUP/cordovapage.png)
 
 
@@ -68,6 +79,8 @@ Bueno a todo esto ya debes saber como clonar un repo No?:neutral_face:
 Si no sigue el tutorial de Wilmer: :arrow_right: [https://www.facebook.com/uilmer/videos/10215509640747370/](https://www.facebook.com/uilmer/videos/10215509640747370/)
 
 >Ya sabes WILMERSCHOOL :sunglasses:
+
+
 
 ## 7. Necesitas instalar las dependencias
 Luego de haber clonado tu repositorio debes instalar las dependencias en la misma carpeta donde clonaste el repo.
@@ -82,6 +95,8 @@ luego el siguiente comando:
 
 ![](/IMG_GROUP/npm.png)
 
+
+
 ## 8. Instala lo siguiente Ya casi falta poco
 Ingresa el siguiente comando en tu consola si estas en MAC o LINUX debes poner SUDO y
 
@@ -95,6 +110,10 @@ Solo debes ingresar esto en consola:
 >`$ ionic serve`
 
 ![](/IMG_GROUP/serve.png)
+
+
+
+
 
 
 ![](/IMG_GROUP/listo.png)
