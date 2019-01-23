@@ -2,11 +2,6 @@ page-chat-private {
 	background: #fff;
 	font-family: 'Lato', sans-serif;
 	margin: 0px auto;
-	
-	::selection{
-	background: rgba(82,179,217,0.3);
-	color: inherit;
-	}
 }
 
 .menu {
@@ -116,7 +111,7 @@ page-chat-private {
     order: 1;
     border-top-left-radius: 0px;
     box-shadow: -1px 2px 0px #D4D4D4;
-    width: 90%;
+    width: 100%;
     color: #333;
 
 }
@@ -130,7 +125,7 @@ page-chat-private {
     order: 1;
     border-bottom-right-radius: 0px;
     box-shadow: 1px 2px 0px #D4D4D4;
-    width: 90%;
+    width: 100%;
     background: #80d8ff;
     color: #f5f5f5;
 }
@@ -179,19 +174,19 @@ page-chat-private {
 
    .self .msg
    {
-        width: 80%;
+        width: 85%;
    } 
    .other .msg
    {
-        width: 75%;
+        width: 85%;
    } 
 }
 
 .msg time {
     font-size: 1.2rem;
     color: #000;
-    margin-top: 3px;
-    float: right;
+/*    margin-top: 3px;
+*/    float: right;
     cursor: default;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
