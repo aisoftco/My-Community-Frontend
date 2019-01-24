@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'chat.html',
 })
 export class ChatPage {
-
+  segment:string = 'peoples';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

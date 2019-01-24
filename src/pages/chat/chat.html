@@ -1,18 +1,95 @@
-<!--
-  Generated template for the ChatPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>chat</ion-title>
-  </ion-navbar>
-
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Chat</ion-title>
+    <ion-buttons end>
+      <ion-item no-lines class="avatar">
+        <ion-avatar>
+          <img src="/assets/imgs/marty.jpg">
+        </ion-avatar>
+      </ion-item>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content >
+  <div >
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="message">
+        Message
+      </ion-segment-button>
+      <ion-segment-button value="peoples">
+        Peoples
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="segment">
+    <ion-list *ngSwitchCase="'message'">
+      <ion-item no-lines>
+        <ion-thumbnail item-start>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="/assets/imgs/marty.jpg">
+            </ion-avatar>
+            <h2>Marty McFly</h2> 
+             <p>Estados Unidos de América</p>
+          </ion-item>
+        </ion-thumbnail>
+      </ion-item>
+  
+   
+  
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'peoples'">
+      <ion-item no-lines>
+        <ion-thumbnail item-start>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="/assets/imgs/marty.jpg">
+            </ion-avatar>
+            <h2>Marty McFly</h2> 
+             <p>Estados Unidos de América</p>
+          </ion-item>
+        </ion-thumbnail>
+        <div item-end class="state">
+        <span class="state dot online" item-start></span> <ion-note  class="status">Online</ion-note>
+      </div>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-thumbnail item-start>
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="/assets/imgs/marty.jpg">
+                  </ion-avatar>
+                  <h2>Marty McFly</h2> 
+                   <p>Estados Unidos de América</p>
+              </ion-item>
+        </ion-thumbnail>
+        <div item-end class="state">
+        <span class="state dot occuped" item-start></span> <ion-note class="status">Occuped</ion-note>
+      </div>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-thumbnail item-start lines>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="/assets/imgs/marty.jpg">
+            </ion-avatar>
+            <h2>Marty McFly</h2> 
+             <p>Estados Unidos de América</p>
+          </ion-item>
+        </ion-thumbnail>
+        <div item-end class="state">
+        <span class="state dot desconected" item-start></span> <ion-note item-end class="status">Desconected</ion-note>
+      </div>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
