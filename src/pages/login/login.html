@@ -13,11 +13,28 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="container" padding>
 
 
   <h1>Login</h1>
 
   <button ion-button color="primary" (click)="goToHome()" > Home </button>
   <button ion-button color="danger" (click)="goToSignup()" > Signup </button>
+  
+  <p> or login with email</p>
+
+  <ion-input   class="inputC"  placeholder="Email"></ion-input>
+  <ion-input   class="inputC" placeholder="Password"></ion-input>
+
+  <label for="">
+  <ion-checkbox></ion-checkbox> Remember me
+</label> 
+<button class="btn-Forgot" href="#">Forgot password?</button>
+
+<button ion-button class="btn-login" href="#">Login</button>
+
+<label id="label-link">Don´t have an account? 
+<button class="link-sign-up" href="#">Sign Up</button>
+</label>
+
 </ion-content>

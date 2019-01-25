@@ -1,3 +1,39 @@
 page-signup {
 
 }
+.container{
+
+    width: 98%;
+    align-content: center;
+    align-items: center;
+     
+}
+.inputC{
+    
+    border: 1px solid #88B3FF;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom:15px;
+    padding-left: 5px;
+   
+}
+p{
+    margin: 12px 12px;
+   text-align: center;
+    color:#A6ADB1;
+    font-size: 12px;
+}
+
+.btn-SignUp{
+    border-radius:18px;
+   background-color: #70CADB;
+   width: 100%;
+   align-items: center;
+   margin-top: 15px;
+    margin-bottom:15px;
+   
+} 
+label{
+    font-size: 12px;
+    color:#9E9E9E;
+}

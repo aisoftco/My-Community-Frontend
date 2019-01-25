@@ -13,10 +13,25 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="container" padding>
 
     <h1>Registrate</h1>
 
   <button ion-button color="primary" (click)="goToHome()" > Home </button>
   <button ion-button color="danger" (click)="goToLogin()" > Login </button>
+
+  <p> or sign up with email</p>
+
+  <ion-input   class="inputC"  placeholder="Name"></ion-input>
+  <ion-input   class="inputC" placeholder="Last Name"></ion-input>
+  <ion-input   class="inputC"  placeholder="Email"></ion-input>
+  <ion-input   class="inputC"  placeholder="Country"></ion-input>
+  <ion-input   class="inputC" placeholder="Password"></ion-input>
+
+  <label for="">
+    <ion-checkbox></ion-checkbox> I agree with Private Policy
+  </label>  
+
+  <button ion-button class="btn-SignUp" href="#">Login</button>
+
 </ion-content>
