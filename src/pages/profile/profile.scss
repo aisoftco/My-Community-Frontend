@@ -1,0 +1,74 @@
+page-profile {
+    .profile{
+        width: 100%;
+        height: auto;
+        position: relative;
+        .coverProfile{
+            width: 100%;
+            height: 25vh;
+            position: absolute;
+            background: #3c82ffff;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        .profileBanner{
+            display: flex;
+            justify-content: center;
+            padding: 4em 0em;
+            .profileImageInfo{
+                width: 50%;
+                text-align: center;
+                display: flex;
+                .profileImage{
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    .status{
+                        width: 16px;
+                        height: 16px;
+                        background: #14e714;
+                        border-radius: 100%;
+                        position: absolute;
+                        right: 0;
+                        margin: 1em;
+                    }
+                    img{
+                        border-radius: 100%;
+                        // border-bottom-right-radius: 0;
+                        width: 100%;
+                        vertical-align: middle;
+                        width: 100%;
+                    }
+                }
+                h1,h2{
+                    line-height: 1em;
+                }
+                h1{
+                    font-weight: 600;
+                }
+                h2{
+                    font-weight: 400;
+                    font-size: 1em;
+                    color: #d6d6d6;
+                }
+                button{
+                    margin-top: .5em;
+                    padding: 0.8em 2em;
+                }
+            }
+        }
+    }
+    
+}
+
+.configActions{
+    padding: 0em 1.2em;
+    ion-list{
+        background: red;
+        .iconListProfile{
+            color: #c9c9c9;
+            margin-right: .5em;
+        }
+    }
+}
