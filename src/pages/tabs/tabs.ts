@@ -9,9 +9,11 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class TabsPage {
 
+  profileRoot = 'ProfilePage'
   chatRoot = 'ChatPage'
   eventsRoot = 'EventsPage'
   settingsRoot = 'SettingsPage'
+  
 
 
   constructor(public navCtrl: NavController) {}
