@@ -15,10 +15,14 @@
 
 #titulo {
     background: url('../assets/img/login/Path_10385.png');
+    background-size: cover;
+    background-position: center;
     min-height: 90px;
     width: 100%;
     min-width: 300px;
     margin-left: -1em;
+    background-position-x: center;
+    background-position-y: bottom;
 }
 
 .container{
