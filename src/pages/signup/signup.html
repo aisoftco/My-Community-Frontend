@@ -7,14 +7,23 @@
 
 
 
-
-
 <ion-content class="container" padding>
 
-    <h1>Registrate</h1>
+  <div id="titulo" >
+    <h1>Hola Es mIguel</h1>
+  </div>
 
-  <button ion-button color="primary" (click)="goToHome()" > Home </button>
-  <button ion-button color="danger" (click)="goToLogin()" > Login </button>
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+     <button id="google" ion-button expand="full" size="large" expand="block" color="primary" (click)="goToHome()" >  <img src="../assets/img/login/google.png"  height="25" width="25">  </button>
+    </ion-col>
+    <ion-col>
+      <button id="facebook" ion-button expand="full" size="large" expand="block" color="danger" (click)="goToLogin()" >   <img src="../assets/img/login/facebook-logo.png"  height="25" width="25"></button>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+  
 
   <p> or sign up with email</p>
 

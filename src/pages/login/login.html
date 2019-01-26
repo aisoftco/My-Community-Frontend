@@ -12,9 +12,16 @@
 
   <h1>Login</h1>
 
-  <button ion-button color="primary" (click)="goToHome()" > Home </button>
-  <button ion-button color="danger" (click)="goToSignup()" > Signup </button>
-  
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+     <button id="google" ion-button expand="full" size="large" expand="block" color="primary" (click)="goToHome()" >  <img src="../assets/img/login/google.png"  height="25" width="25">  </button>
+    </ion-col>
+    <ion-col>
+      <button id="facebook" ion-button expand="full" size="large" expand="block" color="danger" (click)="goToLogin()" >   <img src="../assets/img/login/facebook-logo.png"  height="25" width="25"></button>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
   <p> or login with email</p>
 
   <ion-input   class="inputC"  placeholder="Email"></ion-input>
