@@ -10,6 +10,33 @@
     min-height: 30px;
     border-radius: 1em;
 }
+#ButtonSections{
+    margin-top: -1.2em;
+}
+#titulo {
+    background: url('../assets/img/login/Path_10385.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 130px;
+    width: 100%;
+    min-width: 300px;
+    margin-left: -1em;
+    background-position-x: -1em;
+    background-position-y: -5.1em;
+}
+
+#titulo h1 {
+    font-size : 22px;
+    color: white;
+    text-align: center ;
+    padding-top: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#titulo p {
+    color: white ;
+    font-size: 10px;
+}
 .inputC{
     
     border: 1px solid #88B3FF;
