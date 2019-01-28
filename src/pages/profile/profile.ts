@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the ProfilePage page.
@@ -15,7 +15,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  }
+
+  showConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Desea agregar esta persona?',
+      message: 'Se le enviara un mensaje a la persona !!',
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: () => {
+            console.log('Accion Cancelada');
+          }
+        },
+        {
+          text: 'Agregar',
+          handler: () => {
+            console.log('Notificacion Enviada');
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   ionViewDidLoad() {

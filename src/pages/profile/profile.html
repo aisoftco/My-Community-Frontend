@@ -11,43 +11,66 @@
       Profile
     </ion-title> 
   </div>
+      
+    <div id="capa"></div>
     
-  <div id="capa">
-  </div>
-  
-  <ion-avatar>
-      <img src="assets/imgs/profile.jpg"/>
+    <ion-avatar>
+        <img src="assets/imgs/profile.jpg"/>
     </ion-avatar>
-  <div item-end class="state">
+
+    <div item-end class="state">
       <span class="state dot online" item-start></span>
-  </div>
-
-  <ion-title>
-    Amelia Taylor
-  </ion-title>
-  <p>Productor Design</p>
-
-  <div>
-    <button class = "button small">
-          Add Friends
-    </button>  
-    <button class = "button small">
-          Message
-    </button>
-  </div> 
-
-
+    </div>
   
-  <ion-item>            
-    <ion-input placeholder="Timezone"></ion-input>
-  </ion-item>
-                
-  <ion-item>
-    <ion-input type="number" placeholder="Phone Number"></ion-input>
-  </ion-item>
-                
-  <ion-item>
-      <ion-input  tipe="Email" placeholder="Email"></ion-input>
-  </ion-item>  
+    <ion-title>
+      Amelia Taylor
+    </ion-title>
+    <p>Productor Design</p>
+    <br>
+    <div>
+      <button class="button small" id="add"(click)="showConfirm()" ion-button icon-start>
+          <ion-icon name="contacts"></ion-icon>
+          Add Friends
+      </button>       
+      <button class ="button small" id="message" ion-button icon-start>
+          <ion-icon name="mail"></ion-icon>
+        Message
+      </button>
+    </div> 
+<br>
+      <ion-card>
+          <ion-card-header>
+              <b>About</b>
+          </ion-card-header>
+
+          <ion-card-content>
+              <p style="text-align: justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+          </ion-card-content>
+
+          <ion-card-header>
+              <b>Content</b>
+            </ion-card-header>
+
+          <ion-card-content class="datos">
+              <ion-item>
+                <ion-icon name='phone-portrait' item-start></ion-icon>
+                <p style="text-align: left">301 000 11 22</p>
+              </ion-item>
+
+              <ion-item>
+                  <ion-icon name="mail-open" item-start></ion-icon>
+                  <p style="text-align: left">ejemplo@home.com</p>
+              </ion-item>
+
+              <ion-item>
+                  <ion-icon name="home" item-start></ion-icon>
+                  <p style="text-align: left">Bogota, Colombia</p>
+              </ion-item>                   
+              
+          </ion-card-content>         
+      </ion-card>
     
 </ion-content>
