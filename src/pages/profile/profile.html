@@ -1,38 +1,85 @@
 <ion-content>
+  
   <div class="profile">
-    <div class="coverProfile"></div>
-    <div class="profileBanner">
-      <div class="profileImageInfo">
-          <div>
-              <div class="profileImage">
-                  <div class="status"></div>
-                  <img src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/46691044_2190882384264696_272480366005059584_n.jpg?_nc_cat=101&_nc_ht=scontent.fbog2-1.fna&oh=1e7c1eb9b4e97d7344641040be2f6337&oe=5CB7C3CA" alt="">
-                </div>
-                <h1>Matt Arias</h1>
-                <h2>Bogotá, Colombia</h2>
-                <button>Edit profile</button>
-          </div>
-      </div>
-    </div>
+    <ion-title>
+      View & edit profile
+    </ion-title> 
   </div>
-  <div class="configActions">
-      <ion-list>
-          <ion-item>
-            <ion-icon name="happy" class="iconListProfile"></ion-icon>
-            Set a status
-          </ion-item>
-          <ion-item>
-            <ion-icon name="at" class="iconListProfile"></ion-icon>
-            Activity
-          </ion-item>
-          <ion-item>
-              <ion-icon name="folder-open" class="iconListProfile"></ion-icon>
-              My files
-          </ion-item>
-          <ion-item>
-              <ion-icon name="notifications" class="iconListProfile"></ion-icon>
-              Change mood
-          </ion-item>
-        </ion-list>
+      
+  <div id="capa"></div>
+    
+  <ion-avatar>
+    <img src="assets/imgs/profile.jpg"/>
+  </ion-avatar>
+
+  <div item-end class="state">
+    <span class="state dot online" item-start></span>
   </div>
+  
+  <ion-title>
+      Amelia Taylor
+  </ion-title>
+  <p>Productor Design</p>
+  <br> 
+
+  
+    <div>
+          
+      <div class = "item item-divider"  style="text-align: left"><b>Profile</b></div>
+        
+              <ion-item (click)="openAcount()">
+                <ion-icon name="person" item-start></ion-icon>
+                <p style="text-align: left">Acount details</p>
+              </ion-item>
+    
+              <ion-item (click)="openHome()">
+                  <ion-icon name="document" item-start></ion-icon>
+                  <p style="text-align: left">My Files</p>
+              </ion-item>
+
+        
+      <div class = "item item-divider" style="text-align: left"><b>Notifications</b></div>
+
+        
+          <ion-item (click)="openHome()">
+            <ion-icon name="mail" item-start></ion-icon>
+            <p style="text-align: left">Invite Request</p>
+          </ion-item>
+
+          <ion-item (click)="openHome()">
+            <ion-icon name="send" item-start></ion-icon>
+              <p style="text-align: left">Email notification</p>
+          </ion-item> 
+
+        
+            
+      <div class = "item item-divider" style="text-align: left"><b>Security</b></div>
+
+        
+          <ion-item (click)="openChangepassword()">
+            <ion-icon name="lock" item-start></ion-icon>
+            <p style="text-align: left">Change password</p>
+          </ion-item>            
+        
+
+      <div class = "item item-divider" style="text-align: left"><b>Acount and Setting</b></div>
+      
+        
+          <ion-item (click)="openTerm()">
+            <ion-icon name="paper" item-start></ion-icon>
+            <p style="text-align: left">Terms and conditions</p>
+          </ion-item>
+
+          <ion-item (click)="openHome()">
+            <ion-icon name="clipboard" item-start></ion-icon>
+            <p style="text-align: left">Privacy policy</p>
+          </ion-item>
+              
+          <ion-item (click)="showConfirm()">
+            <ion-icon name="log-out" item-start></ion-icon>
+            <p style="text-align: left">Sign out</p>
+          </ion-item>
+        
+
+    </div>  
 </ion-content>

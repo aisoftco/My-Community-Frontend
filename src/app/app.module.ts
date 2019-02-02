@@ -7,12 +7,18 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
+import { AcountDetailsPage } from '../pages/acount-details/acount-details';
+import { ChangePasswordPage } from '../pages/change-password/change-password';
+import { TermAndConditionsPage } from '../pages/term-and-conditions/term-and-conditions'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ProfilePage
+    ProfilePage,
+    AcountDetailsPage,
+    ChangePasswordPage,
+    TermAndConditionsPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,10 @@ import { ProfilePage } from '../pages/profile/profile';
   entryComponents: [
     MyApp,
     HomePage,
-    ProfilePage
+    ProfilePage,
+    AcountDetailsPage,
+    ChangePasswordPage,
+    TermAndConditionsPage
   ],
   providers: [
     StatusBar,
