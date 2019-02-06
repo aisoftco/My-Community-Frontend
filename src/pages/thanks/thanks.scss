@@ -1,4 +1,88 @@
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
 
+
+#imagenHeader{
+    
+    @media #{$tablet} {
+        display: none;
+      }
+    
+      @media #{$desktop} {
+        display: none;
+      }
+}
+
+#imagenBienvenida{
+    @media #{$tablet} {
+        margin-top: -5em;
+        height: 50%;
+        //width: 40%;
+        margin-left: 30%;
+        margin-top: -4em;
+        padding-top: 0;
+    }
+  
+    @media #{$desktop} {
+        margin-top: -10em;
+        height: 40%;
+        //width: 40%;
+        margin-left: 30%;
+        margin-top: -4em;
+        padding-top: 0;
+    }
+}
+
+#ThankYou{
+    @media #{$tablet} {
+        font-size: 18px;
+        color:yellow;
+      }
+    
+      @media #{$desktop} {
+        text-align: center;
+        font-size:30px;
+        color:#394e62;
+      }
+}
+#contenedorImagenPrincipal{
+    @media #{$tablet} {
+        
+      }
+    
+      @media #{$desktop} {
+        //overflow-y: hidden;
+        //background: red;
+        //min-height: 100px;
+        //height: 1000px;
+      }
+}
+#TextWelcome {
+  font-size: 16px;
+
+  @media #{$tablet} {
+    font-size: 18px;
+    color:yellow;
+  }
+
+  @media #{$desktop} {
+    font-size: 20px;
+    color:#394e62;
+  }
+}
+
+#GetStartedFull{
+    @media #{$tablet} {
+        
+      }
+    
+      @media #{$desktop} {
+        margin-top: -40em;
+        text-align: center;
+      }
+}
+
+/*
 h1{ 
     font-size: 20px;
     text-align: center;
@@ -8,9 +92,9 @@ h1{
 #imagenHeader{
     background: url('../assets/img/login/51535789_368844417280505_5161081609113305088_n.png') no-repeat;
     background-size: cover;
-    min-height: 108px;
+    min-height: 100%;
     margin-left: -4.5em;
-    min-width: 320px;
+    min-width: 100%;
     margin-top: -2em;
 }
 #ThankYou{
@@ -46,3 +130,5 @@ h1{
         
     }
 }
+
+*/
