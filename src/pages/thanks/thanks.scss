@@ -1,0 +1,48 @@
+
+h1{ 
+    font-size: 20px;
+    text-align: center;
+    color: #444864;
+    padding-top: 1em;
+}
+#imagenHeader{
+    background: url('../assets/img/login/51535789_368844417280505_5161081609113305088_n.png') no-repeat;
+    background-size: cover;
+    min-height: 108px;
+    margin-left: -4.5em;
+    min-width: 320px;
+    margin-top: -2em;
+}
+#ThankYou{
+    font-size: 20px;
+    color:#394e62;
+    text-align: center;
+}
+#TextWelcome{
+    color:#394e62;
+    font-size: 14px;
+    padding-top: 0em;
+}
+#imageContentThanks{
+    background: url('../assets/img/thanks/confirm.png')no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    width: 100%;
+    margin-left: -2.5em;
+    min-width: 300px;
+    margin-top: -0.7em;
+    margin-bottom: -1em;
+}
+
+#GetStartedFull{
+    text-align: center;
+    button { 
+        width: 100%;
+        margin-top: 1em;
+        padding: 1.5em;
+        border-radius:3px;
+        display: inline-block;
+        text-align: center;
+        
+    }
+}

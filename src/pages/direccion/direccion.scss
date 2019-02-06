@@ -1,0 +1,33 @@
+
+h1{ 
+    font-size: 20px;
+    text-align: center;
+    color: #444864;
+    padding-top: 2em;
+}
+#TextWelcome{
+    color:#394e62;
+    font-size: 14px;
+    padding-top: 0.5em;
+}
+#imageContent{
+    background: url('../assets/img/direccion/undraw_directions_x53j.png')no-repeat;
+    background-size: cover;
+    min-height: 200px;
+    width: 100%;
+    margin-left: -2.5em;
+    min-width: 300px;
+    margin-top: -1em;
+}
+
+#GetStarted{
+    text-align: center;
+    button { 
+        margin-top: 1em;
+        padding: 1.5em;
+        border-radius:20px;
+        display: inline-block;
+        text-align: center;
+        
+    }
+}
