@@ -1,3 +1,6 @@
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+$mobilemax: "(min-width: 415px)";
 .diag {
     position:absolute;
     z-index:1;
@@ -5,27 +8,54 @@
     top: 0;
     height: 66%;
 }
-
+img {
+    margin-top:40%;
+}
 ion-icon {
     margin-top:40%;
     font-size:7em;
 }
 
 h2 {
-    margin-top:80% !important;
+    margin-top:100% !important;
     font-weight:bold;
     font-size:1em;
 }
 
+#Next a{
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+    left:220px;
+    color: #3c82ff;
+    @media #{$mobilemax} {
+        left:260px;
+    }
+    
+    @media #{$tablet} {
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+        left:540px;
+        top: -30px;
+      }
+    
+      @media #{$desktop} {
+        margin-top: -40em;
+        text-align: center;
+      }
+}
+
 p {
-    width:80%;
+    width:90%;
     display:block;
     margin: 0 auto;
     font-size:.9em;
 }
 
 .swiper-pagination-bullet-active {
-    background:rgb(22, 33, 185);
+    background:#3C82FF;
 }
 
 .swiper-pagination {
