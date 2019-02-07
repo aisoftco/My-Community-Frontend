@@ -11,6 +11,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { ThanksPage } from '../pages/thanks/thanks';
 import { DireccionPage } from '../pages/direccion/direccion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainPage } from './../pages/main/main';
 @NgModule({
   declarations: [
     MyApp,
@@ -18,11 +19,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignupPage,
     LoginPage,
     DireccionPage,
-    ThanksPage
+    ThanksPage,
+    MainPage
 
   ],
   imports: [
-    BrowserModule,
+  
+  BrowserModule,
     IonicModule.forRoot(MyApp),
     BrowserAnimationsModule
   ],
@@ -33,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignupPage,
     LoginPage,
     DireccionPage,
-    ThanksPage
+    ThanksPage,
+    MainPage
   ],
   providers: [
     StatusBar,

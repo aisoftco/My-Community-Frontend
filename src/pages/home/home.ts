@@ -34,6 +34,10 @@ export class HomePage {
 
   }
 
+  goToMain(){
+    this.navCtrl.setRoot(MainPage)
+  }
+
   skip() {
     this.navCtrl.push(MainPage);
   }
