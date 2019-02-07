@@ -3,7 +3,8 @@ $desktop: "(min-width: 1024px)";
 $mobilemax: "(min-width: 415px)";
 .container{
  
-    font-family: Roboto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    margin-bottom: 180px;
     
 
 }
@@ -12,6 +13,7 @@ $mobilemax: "(min-width: 415px)";
     width: 100%;
     margin-top:8px;
     min-width: 414px;
+    height: 80%;
     min-height: 10%;
     margin-right: -80px;
     left: -25px ;
@@ -35,8 +37,8 @@ $mobilemax: "(min-width: 415px)";
 }
 
 #imagenBienvenida{
-    margin-top: 0px;
-    height: 60%;
+    margin-top: -40px;
+    height: 75%;
     width: 100%;
    // margin-left: 20%;
     padding-top: 0;
@@ -111,9 +113,10 @@ $mobilemax: "(min-width: 415px)";
     font-size: 15px;
     font-weight: bold;
     position: relative;
-    top: 10px;
+    top: 30px;
     left:220px;
     color: #3c82ff;
+    
     @media #{$mobilemax} {
         left:260px;
     }
@@ -130,6 +133,27 @@ $mobilemax: "(min-width: 415px)";
         margin-top: -40em;
         text-align: center;
       }
+}
+#circulo{
+  position:relative;
+  width: 12px;
+  height:12px;
+  border-radius: 100%;
+  background-color:#3c82ff;
+  left: 50%;
+  float: left;
+  margin-right:5px;
+  top:8px; 
+}
+#circulo2{
+  position:relative;
+  left: 50%;
+  width: 12px;
+  height:12px;
+  border-radius: 100%;
+  background-color:#d8dbe0;
+  top:8px;
+  float: left;
 }
 
 /*
