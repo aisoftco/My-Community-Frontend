@@ -1,34 +1,57 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { LoginPage } from './../login/login';
-import { SignupPage } from './../signup/signup';
-import { DireccionPage } from '../direccion/direccion';
-import { ThanksPage } from '../thanks/thanks';
+import { Component, ViewChild, trigger, transition, style, state, animate, keyframes } from '@angular/core';
+import { NavController, Slides } from 'ionic-angular';
+import { MainPage } from '../main/main';
+
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  animations: [
+
+    trigger('bounce', [
+      state('*', style({
+        transform: 'translateX(0)'
+      })),
+      transition('* => rightSwipe', animate('700ms ease-out', keyframes([
+        style({transform: 'translateX(0)', offset: 0}),
+        style({transform: 'translateX(-65px)', offset: .3}),
+        style({transform: 'translateX(0)', offset: 1})
+      ]))),
+      transition('* => leftSwipe', animate('700ms ease-out', keyframes([
+        style({transform: 'translateX(0)', offset: 0}),
+        style({transform: 'translateX(65px)', offset: .3}),
+        style({transform: 'translateX(0)', offset: 1})
+      ])))
+    ])
+  ]
 })
 export class HomePage {
+  @ViewChild(Slides) slides: Slides;
+  skipMsg: string = "Skip";
+  state: string = 'x';
 
   constructor(public navCtrl: NavController) {
 
   }
 
-
-
-  goToLogin(){
-    this.navCtrl.setRoot(LoginPage)
+  skip() {
+    this.navCtrl.push(MainPage);
   }
 
-  goToSignup(){
-    this.navCtrl.setRoot(SignupPage)
+  slideChanged() {
+    if (this.slides.isEnd())
+      this.skipMsg = "Alright, I got it";
   }
 
-  goToDireccion(){
-    this.navCtrl.setRoot(DireccionPage)
+  slideMoved() {
+    if (this.slides.getActiveIndex() >= this.slides.getPreviousIndex())
+      this.state = 'rightSwipe';
+    else
+      this.state = 'leftSwipe';
   }
-  goToThanks(){
-    this.navCtrl.setRoot(ThanksPage)
+
+  animationDone() {
+    this.state = 'x';
   }
+
 }

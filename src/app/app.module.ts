@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup'; 
 import { ThanksPage } from '../pages/thanks/thanks';
 import { DireccionPage } from '../pages/direccion/direccion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     MyApp,
@@ -22,7 +23,8 @@ import { DireccionPage } from '../pages/direccion/direccion';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    BrowserAnimationsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

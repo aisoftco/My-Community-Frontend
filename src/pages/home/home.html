@@ -1,23 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-  <button ion-button color="primary" (click)="goToLogin()" > Login </button>
-  <button ion-button color="danger" (click)="goToSignup()" > Signup </button>
-  <button ion-button color="primary" (click)="goToDireccion()" > Direccion </button>
-  <button ion-button color="danger" (click)="goToThanks()" > Thanks You </button>
+<ion-content>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+    <ion-slide>
+      <div class="diag" style="">
+        <img id="" src="../assets/img/thanks/confirm.png" alt="">
+      </div>
+      <div [@bounce]='state'>
+        <h2>track your routine</h2>
+        <p>whether it's sets, reps, weight used, you can track it all with our intuitive interface.</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="diag" style="">
+        <img id="" src="../assets/img/direccion/undraw_directions_x53j.png" alt="">
+      </div>
+      <div [@bounce]='state'>
+        <h2>set personal goals</h2>
+        <p>we're all in the gym for a reason: goals. set goals for diet and fitness.</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <button (click)="skip()" id="skip">{{ skipMsg }}</button>
 </ion-content>
-
-
-
-
-
