@@ -1,15 +1,32 @@
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
 $desktop: "(min-width: 1024px)";
+$mobilemax: "(min-width: 415px)";
+.container{
+ 
+    font-family: Roboto;
+    
 
-
+}
 #imagenHeader{
+    position: relative;
     width: 100%;
-    margin-top: -2em;
-    min-width: 1000px;
-    height: auto;
-    margin-left: -60%;
+    margin-top:8px;
+    min-width: 414px;
+    min-height: 10%;
+    margin-right: -80px;
+    left: -25px ;
+    //right:-20px;
+
+    @media #{$mobilemax} {
+    
+    min-width: 580px;
+    
+    }
+
+       
     @media #{$tablet} {
-        display: none;
+        height: 83%;
+        min-width: 823px;
       }
     
       @media #{$desktop} {
@@ -18,25 +35,28 @@ $desktop: "(min-width: 1024px)";
 }
 
 #imagenBienvenida{
-    margin-top: -15em;
-    height: 100%;
-    //width: 40%;
-    margin-left: 20%;
+    margin-top: 0px;
+    height: 60%;
+    width: 100%;
+   // margin-left: 20%;
     padding-top: 0;
+    
+
     @media #{$tablet} {
-        margin-top: -5em;
-        height: 50%;
+        position: relative;
+        top:-70px;
+        margin-top: 0px;
+        height: 70%;
         //width: 40%;
-        margin-left: 24%;
-        margin-top: -4em;
-        padding-top: 0;
+       // margin-left: 24%;
+          padding-top: 0;
     }
   
     @media #{$desktop} {
         margin-top: -10em;
         height: 40%;
         //width: 40%;
-        margin-left: 30%;
+       // margin-left: 30%;
         margin-top: -4em;
         padding-top: 0;
     }
@@ -44,18 +64,20 @@ $desktop: "(min-width: 1024px)";
 
 #ThankYou{
     text-align: center;
-    font-size:20px;
-    color:#394e62;
+    font-size:21px;
+    color: #0f1950;
+    
+
     @media #{$tablet} {
         text-align: center;
-        font-size:30px;
-        color:#394e62;
+        font-size:35px;
+        color: #0f1950;
       }
     
       @media #{$desktop} {
         text-align: center;
         font-size:30px;
-        color:#394e62;
+        color: #0f1950;
       }
 }
 #contenedorImagenPrincipal{
@@ -71,25 +93,37 @@ $desktop: "(min-width: 1024px)";
       }
 }
 #TextWelcome {
-  font-size: 12px;
+  font-size: 13px;
+  color: #0f1950;
 
   @media #{$tablet} {
-    font-size: 20px;
-    color:#394e62;
+    font-size: 25px;
+    color: #0f1950;
   }
 
   @media #{$desktop} {
     font-size: 20px;
-    color:#394e62;
+    color: #0f1950;
   }
 }
 
-#GetStartedFull{
-    text-align: center;
-    margin-top: -6em;
+#Next a{
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+    left:220px;
+    color: #3c82ff;
+    @media #{$mobilemax} {
+        left:260px;
+    }
+    
     @media #{$tablet} {
-        margin-top: -20em;
+        font-size: 20px;
+        position: relative;
         text-align: center;
+        left:540px;
+        top: -30px;
       }
     
       @media #{$desktop} {
