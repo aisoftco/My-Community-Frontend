@@ -2,24 +2,31 @@
 <ion-content>
   <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
     <ion-slide>
-      <div class="diag" style="">
-        <img id="" src="../assets/img/thanks/confirm.png" alt="">
+      
+      <div class="diag" >
+        <img id="" src="../assets/img/thanks/header.png" alt="">
       </div>
+      <div class="diag2" >
+          <img id="" src="../assets/img/thanks/CONFIRM.png" alt="">
+        </div>
       <div [@bounce]='state'>
-        <h2>track your routine</h2>
-        <p>whether it's sets, reps, weight used, you can track it all with our intuitive interface.</p>
+        <h2>Thank you!</h2>
+        <p>welcome to our beautiful app!</p>
       </div>
     </ion-slide>
     <ion-slide>
-      <div class="diag" style="">
+      <div id="direc">
+          <h4>Connect with people around the world</h4>
+      </div>
+      <div class="diag3" >
         <img id="" src="../assets/img/direccion/undraw_directions_x53j.png" alt="">
       </div>
       <div [@bounce]='state'>
-        <h2>set personal goals</h2>
-        <p>we're all in the gym for a reason: goals. set goals for diet and fitness.</p>
+        <h3>User will be able to go live, chat and meet wiht people near by.</h3>
+        
       </div>
-      <button class="link-sign-up" (click)="goToMain()"  >  NEXT </button>
     </ion-slide>
   </ion-slides>
-  
+  <button class="link-sign-up" (click)="goToMain()"> NEXT</button>
+
 </ion-content>
