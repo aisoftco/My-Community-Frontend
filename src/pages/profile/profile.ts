@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the ProfilePage page.
@@ -15,10 +15,11 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public toastCtrl: ToastController) {
   }
 
-  showConfirm() {
+  showConfirm(position: string) {
+    var text:boolean;
     const confirm = this.alertCtrl.create({
       title: 'Desea agregar esta persona?',
       message: 'Se le enviara un mensaje a la persona !!',
@@ -33,15 +34,24 @@ export class ProfilePage {
           text: 'Agregar',
           handler: () => {
             console.log('Notificacion Enviada');
+            if(text = true){
+              let toast = this.toastCtrl.create({
+                message: 'Notification sent',
+                duration: 4000,
+                position: position
+              });
+            
+              toast.present(toast);
+  
+            }
           }
+          
         }
       ]
     });
     confirm.present();
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
-  }
+  
 
+}
 }

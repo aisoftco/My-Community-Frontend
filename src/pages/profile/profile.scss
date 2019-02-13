@@ -61,6 +61,39 @@ page-profile {
         background: #009688;
     }
 
+    .puntuacion{
+        width: 200px;
+        margin: 0 auto;
+        height: 40px;
+        p{
+            text-align: center;
+        }
+        .clasificacion{
+            direction: rtl;
+            unicode-bidi: bidi-override; 
+            text-align: center;
+            label{
+                color: grey;
+            }
+            label:hover,
+            label:hover ~ label{
+                color: orange;
+            }           
+
+        }
+        label{
+            font-size: 25px;
+        }
+        input[type="radio"] {
+            display: none;
+          }
+
+        input[type="radio"]:checked ~ label {
+            color: orange;
+        }
+
+    }
+
     #capa{
         position: absolute;
         z-index: -1;

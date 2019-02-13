@@ -1,9 +1,3 @@
-<!--
-  Generated template for the ProfilePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-content> 
    
   <div class="profile">
@@ -26,9 +20,12 @@
       Amelia Taylor
     </ion-title>
     <p>Productor Design</p>
+
+
+    
     <br>
     <div>
-      <button class="button small" id="add"(click)="showConfirm()" ion-button icon-start>
+      <button class="button small" id="add"(click)="showConfirm()"ion-button icon-start>
           <ion-icon name="contacts"></ion-icon>
           Add Friends
       </button>       
@@ -38,7 +35,29 @@
       </button>
     </div> 
 <br>
-      <ion-card>
+<h5><p>Rate</p></h5>
+    <div >
+        <form class="puntuacion">
+            <p class="clasificacion">
+                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                      --><label for="radio1">★</label><!--
+                      --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                      --><label for="radio2">★</label><!--
+                      --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                      --><label for="radio3">★</label><!--
+                      --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                      --><label for="radio4">★</label><!--
+                      --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                      --><label for="radio5">★</label>
+            </p>
+         </form>
+
+    </div>
+            
+
+    
+
+    <ion-card>
           <ion-card-header>
               <b>About</b>
           </ion-card-header>
@@ -56,21 +75,25 @@
 
           <ion-card-content class="datos">
               <ion-item>
-                <ion-icon name='phone-portrait' item-start></ion-icon>
-                <p style="text-align: left">301 000 11 22</p>
-              </ion-item>
-
-              <ion-item>
                   <ion-icon name="mail-open" item-start></ion-icon>
                   <p style="text-align: left">ejemplo@home.com</p>
               </ion-item>
 
               <ion-item>
-                  <ion-icon name="home" item-start></ion-icon>
-                  <p style="text-align: left">Bogota, Colombia</p>
-              </ion-item>                   
+                    <ion-icon name="open" item-start></ion-icon>
+                    <p style="text-align: left">
+                    718 Bryant St<br> 
+                    San Francisco, CA <br> 
+                    USA
+                </p>
+              </ion-item> 
+              
+              <ion-item>
+                <ion-icon name="globe" item-start></ion-icon>
+                <p style="text-align: left">example.com</p>
+            </ion-item>
               
           </ion-card-content>         
-      </ion-card>
+    </ion-card>
     
 </ion-content>
