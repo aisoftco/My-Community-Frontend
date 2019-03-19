@@ -1,5 +1,6 @@
 import { Component, ViewChild, trigger, transition, style, state, animate, keyframes } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
+import { ChatPrivatePage } from '../chat-private/chat-private';
 import { MainPage } from '../main/main';
 
 
@@ -56,6 +57,11 @@ export class HomePage {
 
   animationDone() {
     this.state = 'x';
+  }
+  
+  LauchChat()
+  {
+  	this.navCtrl.push(ChatPrivatePage);
   }
 
 }

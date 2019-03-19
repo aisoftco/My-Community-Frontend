@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { ChatPrivatePage } from '../pages/chat-private/chat-private';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -22,7 +23,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     LoginPage,
     DireccionPage,
     ThanksPage,
-    TabsPage
+    TabsPage,
+    ChatPrivatePage
   ],
   imports: [
   
@@ -38,7 +40,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     LoginPage,
     DireccionPage,
     ThanksPage,
-    TabsPage
+    TabsPage,
+    ChatPrivatePage
   ],
   providers: [
     StatusBar,
