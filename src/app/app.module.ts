@@ -6,20 +6,38 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup'; 
+import { ThanksPage } from '../pages/thanks/thanks';
+import { DireccionPage } from '../pages/direccion/direccion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainPage } from './../pages/main/main';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    SignupPage,
+    LoginPage,
+    DireccionPage,
+    ThanksPage,
+    MainPage
+
   ],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
+  
+  BrowserModule,
+    IonicModule.forRoot(MyApp),
+    BrowserAnimationsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    SignupPage,
+    LoginPage,
+    DireccionPage,
+    ThanksPage,
+    MainPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,208 @@
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+$mobilemax: "(min-width: 415px)";
+.container{
+ 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    margin-bottom: 180px;
+    
+
+}
+#imagenHeader{
+    position: relative;
+    width: 100%;
+    margin-top:8px;
+    min-width: 414px;
+    height: 80%;
+    min-height: 10%;
+    margin-right: -80px;
+    left: -25px ;
+    //right:-20px;
+
+    @media #{$mobilemax} {
+    
+    min-width: 580px;
+    
+    }
+
+       
+    @media #{$tablet} {
+        height: 83%;
+        min-width: 823px;
+      }
+    
+      @media #{$desktop} {
+        display: none;
+      }
+}
+
+#imagenBienvenida{
+    margin-top: -40px;
+    height: 75%;
+    width: 100%;
+   // margin-left: 20%;
+    padding-top: 0;
+    
+
+    @media #{$tablet} {
+        position: relative;
+        top:-70px;
+        margin-top: 0px;
+        height: 70%;
+        //width: 40%;
+       // margin-left: 24%;
+          padding-top: 0;
+    }
+  
+    @media #{$desktop} {
+        margin-top: -10em;
+        height: 40%;
+        //width: 40%;
+       // margin-left: 30%;
+        margin-top: -4em;
+        padding-top: 0;
+    }
+}
+
+#ThankYou{
+    text-align: center;
+    font-size:21px;
+    color: #0f1950;
+    
+
+    @media #{$tablet} {
+        text-align: center;
+        font-size:35px;
+        color: #0f1950;
+      }
+    
+      @media #{$desktop} {
+        text-align: center;
+        font-size:30px;
+        color: #0f1950;
+      }
+}
+#contenedorImagenPrincipal{
+    @media #{$tablet} {
+        
+      }
+    
+      @media #{$desktop} {
+        //overflow-y: hidden;
+        //background: red;
+        //min-height: 100px;
+        //height: 1000px;
+      }
+}
+#TextWelcome {
+  font-size: 13px;
+  color: #0f1950;
+
+  @media #{$tablet} {
+    font-size: 25px;
+    color: #0f1950;
+  }
+
+  @media #{$desktop} {
+    font-size: 20px;
+    color: #0f1950;
+  }
+}
+
+#Next a{
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+    left:220px;
+    color: #3c82ff;
+    
+    @media #{$mobilemax} {
+        left:260px;
+    }
+    
+    @media #{$tablet} {
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+        left:540px;
+        top: -30px;
+      }
+    
+      @media #{$desktop} {
+        margin-top: -40em;
+        text-align: center;
+      }
+}
+#circulo{
+  position:relative;
+  width: 12px;
+  height:12px;
+  border-radius: 100%;
+  background-color:#3c82ff;
+  left: 50%;
+  float: left;
+  margin-right:5px;
+  top:8px; 
+}
+#circulo2{
+  position:relative;
+  left: 50%;
+  width: 12px;
+  height:12px;
+  border-radius: 100%;
+  background-color:#d8dbe0;
+  top:8px;
+  float: left;
+}
+
+/*
+h1{ 
+    font-size: 20px;
+    text-align: center;
+    color: #444864;
+    padding-top: 1em;
+}
+#imagenHeader{
+    background: url('../assets/img/login/51535789_368844417280505_5161081609113305088_n.png') no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    margin-left: -4.5em;
+    min-width: 100%;
+    margin-top: -2em;
+}
+#ThankYou{
+    font-size: 20px;
+    color:#394e62;
+    text-align: center;
+}
+#TextWelcome{
+    color:#394e62;
+    font-size: 14px;
+    padding-top: 0em;
+}
+#imageContentThanks{
+    background: url('../assets/img/thanks/confirm.png')no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    width: 100%;
+    margin-left: -2.5em;
+    min-width: 300px;
+    margin-top: -0.7em;
+    margin-bottom: -1em;
+}
+
+#GetStartedFull{
+    text-align: center;
+    button { 
+        width: 100%;
+        margin-top: 1em;
+        padding: 1.5em;
+        border-radius:3px;
+        display: inline-block;
+        text-align: center;
+        
+    }
+}
+
+*/

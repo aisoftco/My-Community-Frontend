@@ -1,3 +1,227 @@
-page-home {
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+$mobilemax: "(min-width: 411px)";
 
+//IMAGEN HEADER! PRIMERA VISTA
+.diag{
+  //PARA PRUEBA CON LAB.
+
+  position: relative;
+  top:77px;
+  width:100%;
+  height:90% ;
+  margin-top:49px;
+ 
+  @media #{$mobilemax}{
+    
+  
+ // top:140px;
+  width:440px;
+  
+  ///left: -110px;
+ 
+  
+  }
+  @media #{$tablet}{
+    position: relative;
+    top:340px;
+    width:780px;
+    height:480px;
+    margin-top:28px;
+  }
+
+  }
+  //IMAGEN DE BIENVENIDA! PRIMERA VISTA
+
+.diag2 {
+  //PARA PRUEBA CON LAB.
+    position:relative;
+    width:100%;
+    top:75px;
+    height:66%;
+
+    @media #{$mobilemax}{
+    position:relative;
+    width:100%;
+    top:140px;
+    height:100% ;
+    }
+
+    @media #{$tablet}{
+      position:relative;
+      width:100%;
+      top:175px;      
+    }
+}
+
+.diag3 { //IMAGEN SEGUNDA VISTA
+  //PARA PRUEBA CON LAB.
+  position:relative;
+  width:100%;
+  top:-20px;
+  height:66%;
+
+  @media #{$mobilemax}{
+    position:relative;
+  width:100%;
+  top:30px;
+  height:66%;
+
+  }
+
+  @media #{$tablet}{
+  width:100%;
+  top:-20px;
+  height:450px;
+
+  }
+}
+
+ion-icon {
+    margin-top:40%;
+    font-size:7em;
+}
+h2 { //TEXTO PRINIPAL - PRIMERA VISTA 
+   
+  //PARA PRUEBA EN LAB.
+  position: relative;
+  top: -230px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top:100% !important;
+  text-align: center;
+  font-size:21px;
+  color: #0f1950;
+
+  @media #{$mobilemax} {
+  position: relative;
+  top: -268px;
+  font-size:25px;  
+ }
+  
+  @media #{$tablet} {
+      font-size:35px;
+      top: -650px;
+    }
+  
+    @media #{$desktop} {
+      text-align: center;
+      font-size:30px;
+      color: #0f1950;
+    }
+}
+p { //TEXTO SECUNDARIO - PRIMERA VISTA
+   
+  position: relative;
+  top: -230px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 33px;
+  color: #0f1950 !important;
+
+  @media #{$mobilemax}{
+  
+    top: -268px;
+  font-size: 16px !important;
+  } 
+
+  @media #{$tablet} {
+    top:-650px;
+    font-size: 20px !important;
+   }
+
+  @media #{$desktop} {
+    font-size: 20px;
+    color: #0f1950;
+  }
+}
+
+#direc h4{ //TEXTO PRINIPAL - SEGUNDA VISTA 
+  position: relative;
+    left: 15%; 
+    width: 70%;
+    font-weight: bold ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:20px !important;
+    color: #0f1950;
+    top:-20px;
+
+    @media #{$mobilemax}{
+      font-size:25px !important;
+    } 
+    @media #{$tablet}{
+      font-size:45px !important;
+      top:-45px;
+    }
+}
+
+h3{ //TEXTO SECUNDARIO - SEGUNDA VISTA 
+  //PARA PRUEBA CON LAB.
+    position: relative;
+    top: 2px !important;
+    left: 15%; 
+    width: 70%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    //margin-top:100% !important;
+    text-align: center ;
+    font-size:12px;
+    color: #0f1950;
+
+    @media #{$mobilemax}{
+     
+    font-size:16px;
+    top: 40px !important;
+   
+    }
+
+    @media #{$tablet}{
+      position: relative;
+      top: 10px !important;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size:30px;
+      
+    }
+
+}
+
+.link-sign-up { //BOTON DE NEXT
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    float: left;
+    font-size: 15px !important;
+    font-weight: bold;
+    position: relative;
+    top: -50px;
+    left: 70% !important;
+    color: #3c82ff;
+
+    @media #{$mobilemax} {
+      top: -60px;    
+    }
+    
+    @media #{$tablet} {
+        font-size: 20px;
+        top: -60px;
+      }
+    
+      @media #{$desktop} {
+        margin-top: -40em;
+        text-align: center;
+      }
+}
+
+.swiper-pagination-bullet-active {
+    background:#3C82FF;
+}
+
+.swiper-pagination {
+    bottom: 12% !important;
+}
+
+#skip {
+    position:absolute;
+    bottom: 20px;
+    width:100%;
+    background: none !important;
+    text-align: center;
+    cursor: pointer;
+    z-index: 5;
 }

@@ -1,14 +1,32 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+    <ion-slide>
+      
+      <div class="diag" >
+        <img id="" src="../assets/img/thanks/header12.png" alt="">
+      </div>
+      <div class="diag2" >
+          <img id="" src="../assets/img/thanks/CONFIRM.png" alt="">
+        </div>
+      <div [@bounce]='state'>
+        <h2>Thank you!</h2>
+        <p>welcome to our beautiful app!</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div id="direc">
+          <h4>Connect with people around the world</h4>
+      </div>
+      <div class="diag3" >
+        <img id="" src="../assets/img/direccion/undraw_directions_x53j.png" alt="">
+      </div>
+      <div [@bounce]='state'>
+        <h3>User will be able to go live, chat and meet wiht people near by.</h3>
+        
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <button class="link-sign-up" (click)="goToMain()"> NEXT</button>
+
 </ion-content>
