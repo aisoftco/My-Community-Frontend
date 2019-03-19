@@ -12,6 +12,8 @@ import { ThanksPage } from '../pages/thanks/thanks';
 import { DireccionPage } from '../pages/direccion/direccion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainPage } from './../pages/main/main';
+import { TabsPage } from '../pages/tabs/tabs';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -20,8 +22,7 @@ import { MainPage } from './../pages/main/main';
     LoginPage,
     DireccionPage,
     ThanksPage,
-    MainPage
-
+    TabsPage
   ],
   imports: [
   
@@ -37,7 +38,7 @@ import { MainPage } from './../pages/main/main';
     LoginPage,
     DireccionPage,
     ThanksPage,
-    MainPage
+    TabsPage
   ],
   providers: [
     StatusBar,

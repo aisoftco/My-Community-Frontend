@@ -1,0 +1,44 @@
+page-chat {
+   /*  ion-avatar img, */ ion-thumbnail img{
+        width: 40px !important;
+        height: 40px !important;
+        padding-left: 5px;
+    }
+    .item-block{
+        padding-left: 5px !important;
+    }
+    .state {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.dot {
+            &.online{
+             height: 10px;
+             width: 10px;
+             background: #5cb85c;
+             border-radius: 50%;
+             display: inline-block;
+            }
+            &.occuped {
+             height: 10px;
+             width: 10px;
+             background: #FF9800;
+             border-radius: 50%;
+             display: inline-block;
+            }
+            &.desconected {
+             height: 10px;
+             width: 10px;
+             background: red;
+             border-radius: 50%;
+             display: inline-block;
+            }
+           }
+    }
+ 
+      .status {
+        position: relative;
+        left: 0px;
+        font-size: 1rem;
+      }
+}
