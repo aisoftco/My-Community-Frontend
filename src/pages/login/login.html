@@ -22,7 +22,7 @@
           size="large"
           expand="block"
           color="primary"
-          (click)="goToHome()"
+          (click)="loginGoogle()"
         >
           <img src="../assets/img/login/google.png" height="25" width="25" />
         </button>
@@ -35,7 +35,7 @@
           size="large"
           expand="block"
           color="danger"
-          (click)="goToSignup()"
+          (click)="loginFacebook()"
         >
           <img
             src="../assets/img/login/facebook-logo.png"
@@ -46,25 +46,25 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-label>or login with email and password</ion-label>
+  <ion-label>or login with email</ion-label>
 
   <ion-input [(ngModel)]="email" class="inputC" placeholder="Email"></ion-input>
   <ion-input
     [(ngModel)]="password"
     class="inputC"
     placeholder="Password"
-    type="password"
   ></ion-input>
 
   <label for=""> <ion-checkbox></ion-checkbox> Remember me </label>
   <button class="btn-Forgot" href="#">Forgot password?</button>
 
-  <button (click)="login()" ion-button class="btn-login" href="#">Login</button>
-
-  <label id="label-link"
-    >Don´t have an account?
-    <button (click)="register()" ion-button expand="full" color="secondary">
-      Sign Up
-    </button></label
+  <button ion-button class="btn-login" (click)="login()">Login</button>
+  <button
+    ion-button
+    class="btn-signup"
+    color="secondary"
+    (click)="goToSignup()"
   >
+    Sign Up
+  </button>
 </ion-content>

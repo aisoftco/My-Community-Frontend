@@ -1,4 +1,5 @@
 import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase/app';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -21,6 +22,18 @@ export class AuthenticationProvider {
     return this.angularFireAuth.auth.signInWithEmailAndPassword(
       email,
       password
+    );
+  }
+
+  loginWithGoogle() {
+    return this.angularFireAuth.auth.signInWithPopup(
+      new firebase.auth.GoogleAuthProvider()
+    );
+  }
+
+  loginWithFacebook() {
+    return this.angularFireAuth.auth.signInWithPopup(
+      new firebase.auth.FacebookAuthProvider()
     );
   }
 
