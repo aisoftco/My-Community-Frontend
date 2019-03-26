@@ -5,42 +5,66 @@
   Ionic pages and navigation.
 -->
 
-
-
 <ion-content class="container" padding>
-
-
-  <div id="titulo" >
+  <div id="titulo">
     <h6>Login Now</h6>
-    <p>Please login to continue using our app </p>
+    <p>Please login to continue using our app</p>
     <p id="p-2">Enter via social networks</p>
-
   </div>
 
   <ion-grid id="ButtonSections">
-  <ion-row>
-    <ion-col>
-     <button id="google" ion-button expand="full" size="large" expand="block" color="primary" (click)="goToHome()" >  <img src="../assets/img/login/google.png"  height="25" width="25">  </button>
-    </ion-col>
-    <ion-col>
-      <button id="facebook" ion-button expand="full" size="large" expand="block" color="danger" (click)="goToSignup()" >   <img src="../assets/img/login/facebook-logo.png"  height="25" width="25"></button>
-    </ion-col>
-  </ion-row>
+    <ion-row>
+      <ion-col>
+        <button
+          id="google"
+          ion-button
+          expand="full"
+          size="large"
+          expand="block"
+          color="primary"
+          (click)="goToHome()"
+        >
+          <img src="../assets/img/login/google.png" height="25" width="25" />
+        </button>
+      </ion-col>
+      <ion-col>
+        <button
+          id="facebook"
+          ion-button
+          expand="full"
+          size="large"
+          expand="block"
+          color="danger"
+          (click)="goToSignup()"
+        >
+          <img
+            src="../assets/img/login/facebook-logo.png"
+            height="25"
+            width="25"
+          />
+        </button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
-  <p> or login with email</p>
+  <ion-label>or login with email and password</ion-label>
 
-  <ion-input   class="inputC"  placeholder="Email"></ion-input>
-  <ion-input   class="inputC" placeholder="Password"></ion-input>
+  <ion-input [(ngModel)]="email" class="inputC" placeholder="Email"></ion-input>
+  <ion-input
+    [(ngModel)]="password"
+    class="inputC"
+    placeholder="Password"
+    type="password"
+  ></ion-input>
 
-  <label for="">
-  <ion-checkbox></ion-checkbox> Remember me
-</label> 
-<button class="btn-Forgot" href="#">Forgot password?</button>
+  <label for=""> <ion-checkbox></ion-checkbox> Remember me </label>
+  <button class="btn-Forgot" href="#">Forgot password?</button>
 
-<button ion-button class="btn-login" href="#">Login</button>
+  <button (click)="login()" ion-button class="btn-login" href="#">Login</button>
 
-<label id="label-link">Don´t have an account? 
-<button class="link-sign-up" href="#">Sign Up</button>
-</label>
-
+  <label id="label-link"
+    >Don´t have an account?
+    <button (click)="register()" ion-button expand="full" color="secondary">
+      Sign Up
+    </button></label
+  >
 </ion-content>
