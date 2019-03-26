@@ -1,4 +1,5 @@
 import { AngularFireAuth } from '@angular/fire/auth';
+
 import * as firebase from 'firebase/app';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -13,10 +14,8 @@ import { Injectable } from '@angular/core';
 export class AuthenticationProvider {
   constructor(
     public http: HttpClient,
-    private angularFireAuth: AngularFireAuth
-  ) {
-    console.log('Hello ProvidersAuthenticationProvider Provider');
-  }
+    public angularFireAuth: AngularFireAuth
+  ) {}
 
   loginWithEmail(email: string, password: string) {
     return this.angularFireAuth.auth.signInWithEmailAndPassword(
@@ -46,6 +45,10 @@ export class AuthenticationProvider {
 
   getStatus() {
     return this.angularFireAuth.authState;
+  }
+
+  getCurrentUser() {
+    return this.angularFireAuth.auth.currentUser;
   }
 
   logOut() {

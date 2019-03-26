@@ -45,7 +45,6 @@ export class LoginPage {
         alert('logeado');
         console.log(data);
       })
-
       .catch(error => {
         alert('error');
         console.log(error);
@@ -63,7 +62,6 @@ export class LoginPage {
         };
         this.usersProvider
           .editUser(user)
-
           .then(userData => {
             alert('registrado');
             console.log(userData);

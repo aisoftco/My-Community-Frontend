@@ -1,3 +1,4 @@
+import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -74,6 +75,7 @@ export const firebaseConfig = {
     AngularFireDatabase,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthenticationProvider,
+
     UsersProvider
   ]
 })

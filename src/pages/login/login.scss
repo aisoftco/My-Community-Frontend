@@ -15,29 +15,31 @@
   margin-top: -1.2em;
 }
 #titulo {
-  background: url('../assets/img/login/51535789_368844417280505_5161081609113305088_n.png')
-    no-repeat;
+  background: url('../assets/img/login/51535789_368844417280505_5161081609113305088_n.png');
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: relative;
+  background-position: center;
   min-height: 130px;
   width: 100%;
   min-width: 3000px;
   margin-left: -1em;
-  background-position-x: -100;
+  background-position-x: -100px;
   background-position-y: bottom;
-  margin-top: 22px;
+  text-align: center;
 }
 
+#ButtonSections {
+  margin-top: -1.2em;
+}
 h6 {
   color: white;
   text-align: center;
   padding-top: 32px;
-  text-decoration: underline;
 }
 #p-2 {
   margin-top: 20px;
 }
-#titulo p {
+#titulo ion-label {
   color: white;
   font-size: 10px;
 }
@@ -87,7 +89,6 @@ label {
   border-radius: 18px;
   width: 100%;
   align-items: center;
-  margin-top: 20px;
   margin-bottom: 15px;
 }
 .link-sign-up {

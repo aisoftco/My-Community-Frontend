@@ -1,5 +1,13 @@
+import { AuthenticationProvider } from './../../providers/authentication/authentication';
+import { UsersProvider } from './../../providers/users/users';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  AlertController,
+  ToastController
+} from 'ionic-angular';
 
 /**
  * Generated class for the ProfilePage page.
@@ -11,15 +19,24 @@ import { IonicPage, NavController, NavParams, AlertController, ToastController }
 @IonicPage()
 @Component({
   selector: 'page-profile',
-  templateUrl: 'profile.html',
+  templateUrl: 'profile.html'
 })
 export class ProfilePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public toastCtrl: ToastController) {
+  photoURL: string;
+  name: string;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public alertCtrl: AlertController,
+    public toastCtrl: ToastController,
+    private usersProvider: UsersProvider,
+    private authenticationProvider: AuthenticationProvider
+  ) {
+    this.name = authenticationProvider.getCurrentUser().displayName;
+    this.photoURL = authenticationProvider.getCurrentUser().photoURL;
   }
-
   showConfirm(position: string) {
-    var text:boolean;
+    var text: boolean;
     const confirm = this.alertCtrl.create({
       title: 'Desea agregar esta persona?',
       message: 'Se le enviara un mensaje a la persona !!',
@@ -34,24 +51,21 @@ export class ProfilePage {
           text: 'Agregar',
           handler: () => {
             console.log('Notificacion Enviada');
-            if(text = true){
+            if ((text = true)) {
               let toast = this.toastCtrl.create({
                 message: 'Notification sent',
                 duration: 4000,
                 position: position
               });
-            
               toast.present(toast);
-  
             }
           }
-          
         }
       ]
     });
     confirm.present();
-
-  
-
-}
+  }
+  logOut() {
+    this.authenticationProvider.logOut();
+  }
 }

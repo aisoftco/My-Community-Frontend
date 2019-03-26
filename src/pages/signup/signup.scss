@@ -12,8 +12,8 @@
 }
 
 #titulo {
-  background: url('../assets/img/login/51535789_368844417280505_5161081609113305088_n.png')
-    no-repeat;
+  background: url('../assets/img/login/51535789_368844417280505_5161081609113305088_n.png');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: relative;
   min-height: 130px;
@@ -22,27 +22,23 @@
   margin-left: -1em;
   background-position-x: -100px;
   background-position-y: bottom;
-}
-#ButtonSections {
-  margin-top: -1.2em;
+  text-align: center;
 }
 
 h6 {
   color: white;
   text-align: center;
   padding-top: 32px;
-  text-decoration: underline;
 }
 #p-2 {
   margin-top: 20px;
 }
-#titulo p {
+#titulo ion-label {
   color: white;
   font-size: 10px;
 }
 .container {
   font-family: Arial, Helvetica, sans-serif;
-  width: 98%;
   align-content: center;
   align-items: center;
 }
@@ -72,7 +68,6 @@ p {
   border-radius: 18px;
   width: 100%;
   align-items: center;
-  margin-top: 15px;
   margin-bottom: 15px;
 }
 label {
