@@ -21,7 +21,11 @@
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
     "@ionic-native/core": "~4.18.0",
+<<<<<<< HEAD
     "@ionic-native/geolocation": "^5.3.0",
+=======
+    "@ionic-native/geolocation": "^4.20.0",
+>>>>>>> laocanio-test
     "@ionic-native/splash-screen": "~4.18.0",
     "@ionic-native/status-bar": "~4.18.0",
     "@ionic/lab": "^1.0.20",
@@ -44,7 +48,7 @@
     "zone.js": "0.8.26"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "^3.2.1",
+    "@ionic/app-scripts": "3.2.3",
     "@ionic/lab": "1.0.19",
     "typescript": "~2.6.2"
   },
@@ -59,7 +63,13 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
+<<<<<<< HEAD
       "cordova-plugin-geolocation": {}
+=======
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+      }
+>>>>>>> laocanio-test
     },
     "platforms": [
       "android"
