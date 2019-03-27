@@ -4,6 +4,11 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ChatPrivatePage } from '../pages/chat-private/chat-private';
+// Comandos
+//$ ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="To locate you"
+//$ npm install --save @ionic-native/geolocation@4
+//GeoLocation
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -45,6 +50,8 @@ import { TabsPage } from '../pages/tabs/tabs';
   ],
   providers: [
     StatusBar,
+    //Importando GeoLocation
+    Geolocation,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
