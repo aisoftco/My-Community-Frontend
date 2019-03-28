@@ -53,10 +53,34 @@ export class ChatPage {
                       currentUser.latitude,
                       currentUser.longitude,
                       'K'
-                    ) <= 1
+                    ) <= 0.1
                   ) {
                     this.users.push(user);
                   }
+                }
+              });
+            },
+            err => {
+              console.log(err);
+            }
+          );
+        chatProvider
+          .getChats()
+          .valueChanges()
+          .subscribe(
+            data => {
+              this.chatRooms = [];
+              data.forEach(chatRoom => {
+                if (
+                  this.distance(
+                    chatRoom.latitude,
+                    chatRoom.longitude,
+                    currentUser.latitude,
+                    currentUser.longitude,
+                    'K'
+                  ) <= 0.1
+                ) {
+                  this.chatRooms.push(chatRoom);
                 }
               });
             },
