@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from './../home/home';
 import { LoginPage } from '../login/login';
 import { AuthenticationProvider } from '../../providers/authentication/authentication';
-import { UsersProvider } from '../../providers/users/users';
+import { UserProvider } from '../../providers/user/user';
 
 /**
  * Generated class for the SignupPage page.
@@ -27,7 +27,7 @@ export class SignupPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private authenticationProvider: AuthenticationProvider,
-    private usersProvider: UsersProvider
+    private userProvider: UserProvider
   ) {}
 
   ionViewDidLoad() {
@@ -51,7 +51,7 @@ export class SignupPage {
           displayName: data.user.displayName,
           photoURL: data.user.photoURL
         };
-        this.usersProvider
+        this.userProvider
           .editUser(user)
           .then(userData => {
             alert('registrado');
@@ -79,7 +79,7 @@ export class SignupPage {
           displayName: data.user.displayName,
           photoURL: data.user.photoURL
         };
-        this.usersProvider
+        this.userProvider
           .editUser(user)
           .then(userData => {
             alert('registrado');
@@ -107,9 +107,9 @@ export class SignupPage {
           const user = {
             uid: data.user.uid,
             email: this.email,
-            name: this.name
+            displayName: this.name
           };
-          this.usersProvider
+          this.userProvider
             .createUser(user)
             .then(cUserData => {
               alert('registrado');

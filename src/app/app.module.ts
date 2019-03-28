@@ -30,7 +30,9 @@ import {
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
 import { HttpModule } from '@angular/http';
-import { UsersProvider } from '../providers/users/users';
+import { UserProvider } from '../providers/user/user';
+import { GeolocationControlProvider } from '../providers/geolocation-control/geolocation-control';
+import { ChatProvider } from '../providers/chat/chat';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDHaK1C-4k5GbGTux_zksWuiON_X8EEsMU',
@@ -83,7 +85,9 @@ export const firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthenticationProvider,
 
-    UsersProvider
+    UserProvider,
+    GeolocationControlProvider,
+    ChatProvider
   ]
 })
 export class AppModule {}

@@ -1,8 +1,6 @@
-import { Geolocation } from '@ionic-native/geolocation';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-import { Geolocation } from '@ionic-native/geolocation';
+import { GeolocationControlProvider } from '../../providers/geolocation-control/geolocation-control';
 
 /**
  * Generated class for the EventsPage page.
@@ -18,25 +16,19 @@ import { Geolocation } from '@ionic-native/geolocation';
 })
 export class EventsPage {
   //Declarando latitude y longitude
-  latitude:number;
-  longitude:number;
+  latitude: number;
+  longitude: number;
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-  	private geolocation: Geolocation) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private geolocationControlProvider: GeolocationControlProvider
+  ) {
+    geolocationControlProvider.updateCurrentuserLocation();
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad EventsPage');
   }
 
-  getLocation(){
-    this.geolocation.getCurrentPosition().then((resp) => {
-    this.latitude=resp.coords.latitude;
-    this.longitude=resp.coords.longitude
-
-    }).catch((error) => {
-    console.log('Error getting location', error);
-    });
-
-  }
+  getLocation() {}
 }

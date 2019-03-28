@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 /*
   Generated class for the UsersProvider provider.
@@ -9,14 +10,14 @@ import { AngularFireDatabase } from '@angular/fire/database';
   and Angular DI.
 */
 @Injectable()
-export class UsersProvider {
+export class UserProvider {
   constructor(
     public http: HttpClient,
     private angularFireDatabase: AngularFireDatabase
   ) {}
 
   getUsers() {
-    return this.angularFireDatabase.list('/users');
+    return this.angularFireDatabase.list('users/');
   }
 
   getUser(uid) {

@@ -1,4 +1,4 @@
-import { UsersProvider } from './../../providers/users/users';
+import { UserProvider } from './../../providers/user/user';
 import { AuthenticationProvider } from './../../providers/authentication/authentication';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -24,7 +24,7 @@ export class LoginPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private authenticationProvider: AuthenticationProvider,
-    private usersProvider: UsersProvider
+    private userProvider: UserProvider
   ) {}
 
   ionViewDidLoad() {
@@ -34,6 +34,7 @@ export class LoginPage {
   goToHome() {
     this.navCtrl.setRoot(HomePage);
   }
+
   goToSignup() {
     this.navCtrl.setRoot(SignupPage);
   }
@@ -60,7 +61,7 @@ export class LoginPage {
           displayName: data.user.displayName,
           photoURL: data.user.photoURL
         };
-        this.usersProvider
+        this.userProvider
           .editUser(user)
           .then(userData => {
             alert('registrado');
@@ -88,7 +89,7 @@ export class LoginPage {
           displayName: data.user.displayName,
           photoURL: data.user.photoURL
         };
-        this.usersProvider
+        this.userProvider
           .editUser(user)
           .then(userData => {
             alert('registrado');

@@ -18,7 +18,7 @@
   <ion-title>
     {{ name }}
   </ion-title>
-  <p>Productor Design</p>
+  <ion-label *ngIf="profession">{{ profession }}</ion-label>
 
   <br />
   <div>
@@ -38,60 +38,16 @@
     </button>
   </div>
   <br />
-  <h5><p>Rate</p></h5>
-  <div>
-    <form class="puntuacion">
-      <p class="clasificacion">
-        <input id="radio1" type="radio" name="estrellas" value="5" /><!--
-                      --><label for="radio1">★</label
-        ><!--
-                      --><input
-          id="radio2"
-          type="radio"
-          name="estrellas"
-          value="4"
-        /><!--
-                      --><label for="radio2">★</label
-        ><!--
-                      --><input
-          id="radio3"
-          type="radio"
-          name="estrellas"
-          value="3"
-        /><!--
-                      --><label for="radio3">★</label
-        ><!--
-                      --><input
-          id="radio4"
-          type="radio"
-          name="estrellas"
-          value="2"
-        /><!--
-                      --><label for="radio4">★</label
-        ><!--
-                      --><input
-          id="radio5"
-          type="radio"
-          name="estrellas"
-          value="1"
-        /><!--
-                      --><label for="radio5">★</label>
-      </p>
-    </form>
-  </div>
 
   <ion-card>
     <ion-card-header>
       <b>About</b>
     </ion-card-header>
 
-    <ion-card-content>
-      <p style="text-align: justify">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+    <ion-card-content *ngIf="about">
+      <ion-label style="text-align: justify">
+        {{ about }}
+      </ion-label>
     </ion-card-content>
 
     <ion-card-header>
@@ -101,21 +57,22 @@
     <ion-card-content class="datos">
       <ion-item>
         <ion-icon name="mail-open" item-start></ion-icon>
-        <p style="text-align: left">ejemplo@home.com</p>
+        <ion-label style="text-align: left"> {{ email }}</ion-label>
       </ion-item>
 
-      <ion-item>
-        <ion-icon name="open" item-start></ion-icon>
-        <p style="text-align: left">
-          718 Bryant St<br />
-          San Francisco, CA <br />
-          USA
-        </p>
-      </ion-item>
-
-      <ion-item>
+      <ion-item *ngIf="web">
         <ion-icon name="globe" item-start></ion-icon>
-        <p style="text-align: left">example.com</p>
+        <ion-label style="text-align: left">{{ web }}</ion-label>
+      </ion-item>
+
+      <ion-item *ngIf="hobbie">
+        <ion-icon name="american-football" item-start></ion-icon>
+        <ion-label style="text-align: left"> {{ hobbie }}</ion-label>
+      </ion-item>
+
+      <ion-item *ngIf="profession">
+        <ion-icon name="school" item-start></ion-icon>
+        <ion-label style="text-align: left">{{ profession }}</ion-label>
       </ion-item>
     </ion-card-content>
   </ion-card>

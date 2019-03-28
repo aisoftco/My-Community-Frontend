@@ -1,5 +1,5 @@
+import { UserProvider } from './../../providers/user/user';
 import { AuthenticationProvider } from './../../providers/authentication/authentication';
-import { UsersProvider } from './../../providers/users/users';
 import { Component } from '@angular/core';
 import {
   IonicPage,
@@ -24,47 +24,33 @@ import {
 export class ProfilePage {
   photoURL: string;
   name: string;
+  profession: string;
+  web: string;
+  hobbie: string;
+  email: string;
+  about: string;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public alertCtrl: AlertController,
     public toastCtrl: ToastController,
-    private usersProvider: UsersProvider,
-    private authenticationProvider: AuthenticationProvider
+    private authenticationProvider: AuthenticationProvider,
+    private userProvider: UserProvider
   ) {
     this.name = authenticationProvider.getCurrentUser().displayName;
     this.photoURL = authenticationProvider.getCurrentUser().photoURL;
+    this.email = authenticationProvider.getCurrentUser().email;
+    userProvider
+      .getUser(authenticationProvider.getCurrentUser().uid)
+      .valueChanges()
+      .subscribe(user => {
+        this.profession = user.profession;
+        this.web = user.web;
+        this.hobbie = user.hobbie;
+        this.about = user.about;
+      });
   }
-  showConfirm(position: string) {
-    var text: boolean;
-    const confirm = this.alertCtrl.create({
-      title: 'Desea agregar esta persona?',
-      message: 'Se le enviara un mensaje a la persona !!',
-      buttons: [
-        {
-          text: 'Cancelar',
-          handler: () => {
-            console.log('Accion Cancelada');
-          }
-        },
-        {
-          text: 'Agregar',
-          handler: () => {
-            console.log('Notificacion Enviada');
-            if ((text = true)) {
-              let toast = this.toastCtrl.create({
-                message: 'Notification sent',
-                duration: 4000,
-                position: position
-              });
-              toast.present(toast);
-            }
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
+  showConfirm(position: string) {}
   logOut() {
     this.authenticationProvider.logOut();
   }
