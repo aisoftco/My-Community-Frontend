@@ -15,7 +15,12 @@ export class ChatProvider {
     private angularFireDatabase: AngularFireDatabase
   ) {}
   getChats() {
-    return this.angularFireDatabase.list('/chat');
+    return this.angularFireDatabase.list('/chats');
+  }
+
+  createChat(chat) {
+    chat.id = this.angularFireDatabase.createPushId();
+    return this.angularFireDatabase.object('/chats/' + chat.id).set(chat);
   }
 
   getChat(id) {

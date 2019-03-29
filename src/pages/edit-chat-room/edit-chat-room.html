@@ -1,0 +1,37 @@
+<!--
+  Generated template for the EditChatRoomPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Chat room</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-input placeholder="Name" [(ngModel)]="name"></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-input
+        placeholder="Description"
+        [(ngModel)]="description"
+      ></ion-input>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <button ion-button color="secondary" class="full" (click)="goToBack()">
+          Cancel
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" class="full" (click)="save()">
+          Save
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

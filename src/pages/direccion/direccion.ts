@@ -12,19 +12,14 @@ import { HomePage } from '../home/home';
 @IonicPage()
 @Component({
   selector: 'page-direccion',
-  templateUrl: 'direccion.html',
+  templateUrl: 'direccion.html'
 })
 export class DireccionPage {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ionViewDidLoad() {}
+
+  goBackHome() {
+    this.navCtrl.setRoot(HomePage);
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DireccionPage');
-  }
-
-  goBackHome(){
-    this.navCtrl.setRoot(HomePage)
-  }
-
 }

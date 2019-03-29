@@ -20,16 +20,24 @@ export class ChatPrivatePage {
   chatKey: string;
   messages: Array<any> = [];
   message: string = '';
+  title: string = '';
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public chatProvider: ChatProvider
   ) {
     this.currentuser = this.navParams.get('current');
-    this.chatKey = chatProvider.getPrivateChatKey(
-      this.currentuser,
-      this.navParams.get('other')
-    );
+    const catRoom = this.navParams.get('chatRoom');
+    if (catRoom) {
+      this.title = catRoom.name;
+      this.chatKey = catRoom.id;
+    } else {
+      this.title = this.currentuser.displayName;
+      this.chatKey = chatProvider.getPrivateChatKey(
+        this.currentuser,
+        this.navParams.get('other')
+      );
+    }
     chatProvider
       .getMessageChat(this.chatKey)
       .valueChanges()
@@ -53,9 +61,7 @@ export class ChatPrivatePage {
       );
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ChatPrivatePage');
-  }
+  ionViewDidLoad() {}
 
   goToBack() {
     this.navCtrl.setRoot(ChatPage);

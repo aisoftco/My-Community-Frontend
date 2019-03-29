@@ -59,6 +59,6 @@ export class GeolocationControlProvider {
   }
 
   areNear(other, current) {
-    return this.calculateDistance(other, current) <= 0.1;
+    return this.calculateDistance(other, current) <= 0.05;
   }
 }

@@ -40,9 +40,7 @@ export class LoginPage {
   login() {
     this.authenticationProvider
       .loginWithEmail(this.email, this.password)
-      .then(data => {
-        console.log(data);
-      })
+      .then(data => {})
       .catch(error => {
         console.log(error);
       });
@@ -59,13 +57,10 @@ export class LoginPage {
         };
         this.userProvider
           .editUser(user)
-          .then(userData => {
-            console.log(userData);
-          })
+          .then(userData => {})
           .catch(error => {
             console.log(error);
           });
-        console.log(data);
       })
       .catch(error => {
         console.log(error);
@@ -83,13 +78,10 @@ export class LoginPage {
         };
         this.userProvider
           .editUser(user)
-          .then(userData => {
-            console.log(userData);
-          })
+          .then(userData => {})
           .catch(error => {
             console.log(error);
           });
-        console.log(data);
       })
       .catch(error => {
         console.log(error);

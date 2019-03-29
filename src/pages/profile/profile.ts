@@ -39,7 +39,7 @@ export class ProfilePage {
   ) {
     if (authenticationProvider.getCurrentUser()) {
       this.name = authenticationProvider.getCurrentUser().displayName;
-      this.photoURL = authenticationProvider.getCurrentUser().photoURL;
+      this.photoURL = '../assets/imgs/man.png';
       this.email = authenticationProvider.getCurrentUser().email;
       userProvider
         .getUser(authenticationProvider.getCurrentUser().uid)
@@ -49,6 +49,7 @@ export class ProfilePage {
           this.web = user.web;
           this.hobbie = user.hobbie;
           this.about = user.about;
+          this.photoURL = user.photoURL;
         });
     } else {
       this.logOut();

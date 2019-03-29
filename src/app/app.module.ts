@@ -1,3 +1,4 @@
+import { EditChatRoomPage } from './../pages/edit-chat-room/edit-chat-room';
 import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,8 +10,6 @@ import { ChatPrivatePage } from '../pages/chat-private/chat-private';
 // Comandos
 //$ ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="To locate you"
 //$ npm install --save @ionic-native/geolocation@4
-//GeoLocation
-import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -33,6 +32,7 @@ import { HttpModule } from '@angular/http';
 import { UserProvider } from '../providers/user/user';
 import { GeolocationControlProvider } from '../providers/geolocation-control/geolocation-control';
 import { ChatProvider } from '../providers/chat/chat';
+import { EventProvider } from '../providers/event/event';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDHaK1C-4k5GbGTux_zksWuiON_X8EEsMU',
@@ -52,7 +52,8 @@ export const firebaseConfig = {
     DireccionPage,
     ThanksPage,
     TabsPage,
-    ChatPrivatePage
+    ChatPrivatePage,
+    EditChatRoomPage
   ],
   imports: [
     BrowserModule,
@@ -72,7 +73,8 @@ export const firebaseConfig = {
     DireccionPage,
     ThanksPage,
     TabsPage,
-    ChatPrivatePage
+    ChatPrivatePage,
+    EditChatRoomPage
   ],
   providers: [
     HttpClient,
@@ -87,7 +89,8 @@ export const firebaseConfig = {
 
     UserProvider,
     GeolocationControlProvider,
-    ChatProvider
+    ChatProvider,
+    EventProvider
   ]
 })
 export class AppModule {}

@@ -12,17 +12,13 @@ import { HomePage } from '../home/home';
 @IonicPage()
 @Component({
   selector: 'page-thanks',
-  templateUrl: 'thanks.html',
+  templateUrl: 'thanks.html'
 })
 export class ThanksPage {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ThanksPage');
-  }
-  goBackHome(){
+  ionViewDidLoad() {}
+  goBackHome() {
     this.navCtrl.setRoot(HomePage);
   }
 }

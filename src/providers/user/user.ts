@@ -25,10 +25,12 @@ export class UserProvider {
   }
 
   createUser(user) {
+    this.providePhoto(user);
     return this.angularFireDatabase.object('/users/' + user.uid).set(user);
   }
 
   editUser(user) {
+    this.providePhoto(user);
     return this.angularFireDatabase.object('/users/' + user.uid).update(user);
   }
 

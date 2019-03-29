@@ -1,3 +1,4 @@
+import { EditChatRoomPage } from './../edit-chat-room/edit-chat-room';
 import { ChatPrivatePage } from './../chat-private/chat-private';
 import { GeolocationControlProvider } from './../../providers/geolocation-control/geolocation-control';
 import { ChatProvider } from './../../providers/chat/chat';
@@ -5,6 +6,7 @@ import { AuthenticationProvider } from './../../providers/authentication/authent
 import { UserProvider } from './../../providers/user/user';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ProfilePage } from '../profile/profile';
 
 /**
  * Generated class for the ChatPage page.
@@ -38,7 +40,6 @@ export class ChatPage {
         .subscribe(
           currentUser => {
             this.currentUser = currentUser;
-            this.userProvider.providePhoto(currentUser);
             this.fillUsers(currentUser);
             this.fillChatRooms(currentUser);
           },
@@ -58,7 +59,6 @@ export class ChatPage {
           data.forEach(user => {
             if (user.uid != currentUser.uid) {
               if (this.geoProvider.areNear(user, currentUser)) {
-                this.userProvider.providePhoto(user);
                 this.users.push(user);
               }
             }
@@ -90,10 +90,23 @@ export class ChatPage {
   ionViewDidLoad() {}
 
   chatWith(user) {
-    alert(user.uid);
     this.navCtrl.setRoot(ChatPrivatePage, {
       current: this.currentUser,
       other: user
     });
+  }
+
+  createChatRoom() {
+    this.navCtrl.setRoot(EditChatRoomPage);
+  }
+
+  enterToChat(chatRoom) {
+    this.navCtrl.setRoot(ChatPrivatePage, {
+      current: this.currentUser,
+      chatRoom: chatRoom
+    });
+  }
+  goToProfile() {
+    this.navCtrl.setRoot(ProfilePage);
   }
 }

@@ -5,19 +5,22 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>events</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-        Latitude {{latitude}}<br>
-        Longitude {{longitude}}<br>
-
-
-        <button ion-button color="secondary" (click)="getLocation()" small round> Obtener Localizacion </button>
-        
+  <ion-list>
+    <ion-item no-lines>
+      <ion-thumbnail item-start>
+        <ion-item *ngFor="let event of events; let i = index">
+          <ion-avatar item-start>
+            <img src="../assets/imgs/events.jpg" />
+          </ion-avatar>
+          <ion-title>{{ event.name }}</ion-title>
+        </ion-item>
+      </ion-thumbnail>
+    </ion-item>
+  </ion-list>
 </ion-content>

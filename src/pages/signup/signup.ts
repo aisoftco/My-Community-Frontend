@@ -51,13 +51,10 @@ export class SignupPage {
         };
         this.userProvider
           .editUser(user)
-          .then(userData => {
-            console.log(userData);
-          })
+          .then(userData => {})
           .catch(error => {
             console.log(error);
           });
-        console.log(data);
       })
       .catch(error => {
         console.log(error);
@@ -75,13 +72,10 @@ export class SignupPage {
         };
         this.userProvider
           .editUser(user)
-          .then(userData => {
-            console.log(userData);
-          })
+          .then(userData => {})
           .catch(error => {
             console.log(error);
           });
-        console.log(data);
       })
       .catch(error => {
         console.log(error);
@@ -101,9 +95,7 @@ export class SignupPage {
           };
           this.userProvider
             .createUser(user)
-            .then(cUserData => {
-              console.log(cUserData);
-            })
+            .then(cUserData => {})
             .catch(error => {
               console.log(error);
             });

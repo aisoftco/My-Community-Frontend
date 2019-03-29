@@ -8,7 +8,7 @@
     <ion-title text-center>Chat</ion-title>
     <ion-buttons end>
       <ion-item no-lines class="avatar">
-        <ion-avatar>
+        <ion-avatar (click)="goToProfile()">
           <img src="{{ currentUser.photoURL }}" />
         </ion-avatar>
       </ion-item>
@@ -30,13 +30,24 @@
 
   <div [ngSwitch]="segment">
     <ion-list *ngSwitchCase="'message'">
+      <button
+        ion-button
+        color="primary"
+        (click)="createChatRoom()"
+        class="full"
+      >
+        New
+      </button>
       <ion-item no-lines>
         <ion-thumbnail item-start>
-          <ion-item *ngFor="let chatRoom of chatRooms; let i = index">
+          <ion-item
+            *ngFor="let chatRoom of chatRooms; let i = index"
+            (click)="enterToChat(chatRoom)"
+          >
             <ion-avatar item-start>
-              <img src="{{ chatRoom.imagen }}" />
+              <img src="../assets/imgs/chat.png" />
             </ion-avatar>
-            <ion-title>{{ chatRoom.nombre }}</ion-title>
+            <ion-title>{{ chatRoom.name }}</ion-title>
           </ion-item>
         </ion-thumbnail>
       </ion-item>
