@@ -27,9 +27,7 @@ export class LoginPage {
     private userProvider: UserProvider
   ) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
+  ionViewDidLoad() {}
 
   goToHome() {
     this.navCtrl.setRoot(HomePage);
@@ -43,11 +41,9 @@ export class LoginPage {
     this.authenticationProvider
       .loginWithEmail(this.email, this.password)
       .then(data => {
-        alert('logeado');
         console.log(data);
       })
       .catch(error => {
-        alert('error');
         console.log(error);
       });
   }
@@ -64,18 +60,14 @@ export class LoginPage {
         this.userProvider
           .editUser(user)
           .then(userData => {
-            alert('registrado');
             console.log(userData);
           })
           .catch(error => {
-            alert('An error has occurred');
             console.log(error);
           });
-        alert('logeado');
         console.log(data);
       })
       .catch(error => {
-        alert('error');
         console.log(error);
       });
   }
@@ -92,19 +84,14 @@ export class LoginPage {
         this.userProvider
           .editUser(user)
           .then(userData => {
-            alert('registrado');
             console.log(userData);
           })
           .catch(error => {
-            alert('An error has occurred');
             console.log(error);
           });
-        alert('logeado');
         console.log(data);
       })
       .catch(error => {
-        alert('error');
-
         console.log(error);
       });
   }

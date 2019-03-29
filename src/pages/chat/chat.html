@@ -9,7 +9,7 @@
     <ion-buttons end>
       <ion-item no-lines class="avatar">
         <ion-avatar>
-          <img src="/assets/imgs/marty.jpg" />
+          <img src="{{ currentUser.photoURL }}" />
         </ion-avatar>
       </ion-item>
     </ion-buttons>
@@ -20,10 +20,10 @@
   <div>
     <ion-segment [(ngModel)]="segment">
       <ion-segment-button value="message">
-        Chats rooms
+        Chat rooms
       </ion-segment-button>
       <ion-segment-button value="peoples">
-        Peoples
+        People
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -45,17 +45,17 @@
     <ion-list *ngSwitchCase="'peoples'">
       <ion-item no-lines>
         <ion-thumbnail item-start>
-          <ion-item *ngFor="let user of users; let i = index">
+          <ion-item
+            *ngFor="let user of users; let i = index"
+            (click)="chatWith(user)"
+          >
             <ion-avatar item-start>
               <img src="{{ user.photoURL }}" />
             </ion-avatar>
             <ion-title>{{ user.email }}</ion-title>
+            <span class="state dot online" item-start></span>
           </ion-item>
         </ion-thumbnail>
-        <div item-end class="state">
-          <span class="state dot online" item-start></span>
-          <ion-note class="status">Online</ion-note>
-        </div>
       </ion-item>
     </ion-list>
   </div>

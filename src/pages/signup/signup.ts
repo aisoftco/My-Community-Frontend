@@ -30,9 +30,7 @@ export class SignupPage {
     private userProvider: UserProvider
   ) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SignupPage');
-  }
+  ionViewDidLoad() {}
 
   goToHome() {
     this.navCtrl.setRoot(HomePage);
@@ -54,18 +52,14 @@ export class SignupPage {
         this.userProvider
           .editUser(user)
           .then(userData => {
-            alert('registrado');
             console.log(userData);
           })
           .catch(error => {
-            alert('An error has occurred');
             console.log(error);
           });
-        alert('logeado');
         console.log(data);
       })
       .catch(error => {
-        alert('error');
         console.log(error);
       });
   }
@@ -82,18 +76,14 @@ export class SignupPage {
         this.userProvider
           .editUser(user)
           .then(userData => {
-            alert('registrado');
             console.log(userData);
           })
           .catch(error => {
-            alert('An error has occurred');
             console.log(error);
           });
-        alert('logeado');
         console.log(data);
       })
       .catch(error => {
-        alert('error');
         console.log(error);
       });
   }
@@ -112,11 +102,9 @@ export class SignupPage {
           this.userProvider
             .createUser(user)
             .then(cUserData => {
-              alert('registrado');
               console.log(cUserData);
             })
             .catch(error => {
-              alert('An error has occurred');
               console.log(error);
             });
         })

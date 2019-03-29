@@ -37,18 +37,22 @@ export class ProfilePage {
     private authenticationProvider: AuthenticationProvider,
     private userProvider: UserProvider
   ) {
-    this.name = authenticationProvider.getCurrentUser().displayName;
-    this.photoURL = authenticationProvider.getCurrentUser().photoURL;
-    this.email = authenticationProvider.getCurrentUser().email;
-    userProvider
-      .getUser(authenticationProvider.getCurrentUser().uid)
-      .valueChanges()
-      .subscribe(user => {
-        this.profession = user.profession;
-        this.web = user.web;
-        this.hobbie = user.hobbie;
-        this.about = user.about;
-      });
+    if (authenticationProvider.getCurrentUser()) {
+      this.name = authenticationProvider.getCurrentUser().displayName;
+      this.photoURL = authenticationProvider.getCurrentUser().photoURL;
+      this.email = authenticationProvider.getCurrentUser().email;
+      userProvider
+        .getUser(authenticationProvider.getCurrentUser().uid)
+        .valueChanges()
+        .subscribe(user => {
+          this.profession = user.profession;
+          this.web = user.web;
+          this.hobbie = user.hobbie;
+          this.about = user.about;
+        });
+    } else {
+      this.logOut();
+    }
   }
   showConfirm(position: string) {}
   logOut() {

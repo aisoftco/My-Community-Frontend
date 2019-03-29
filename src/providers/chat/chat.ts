@@ -21,4 +21,27 @@ export class ChatProvider {
   getChat(id) {
     return this.angularFireDatabase.object('/chats/' + id);
   }
+
+  getMessageChat(id) {
+    return this.angularFireDatabase.list('/chats/' + id + '/messages');
+  }
+  setMessageChat(id, message) {
+    return this.angularFireDatabase
+      .object(
+        '/chats/' + id + '/messages/' + this.angularFireDatabase.createPushId()
+      )
+      .set(message);
+  }
+
+  getPrivateChatKey(current, other) {
+    let users = [current.uid, other.uid];
+    users.sort();
+    return users[0] + '-' + users[1];
+  }
+
+  setMessagePrivateChat(current, other, message) {
+    let users = [current.uid, other.uid];
+    users.sort();
+    return this.setMessageChat(users[0] + '-' + users[1], message);
+  }
 }

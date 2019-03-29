@@ -31,4 +31,8 @@ export class UserProvider {
   editUser(user) {
     return this.angularFireDatabase.object('/users/' + user.uid).update(user);
   }
+
+  providePhoto(user) {
+    if (!user.photoURL) user.photoURL = '../assets/imgs/man.png';
+  }
 }
