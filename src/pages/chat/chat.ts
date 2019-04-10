@@ -7,6 +7,7 @@ import { UserProvider } from './../../providers/user/user';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
+import { User } from '../../interfaces/user.interface';
 
 /**
  * Generated class for the ChatPage page.
@@ -56,7 +57,7 @@ export class ChatPage {
       .subscribe(
         data => {
           this.users = [];
-          data.forEach(user => {
+          data.forEach((user: User) => {
             if (user.uid != currentUser.uid) {
               if (this.geoProvider.areNear(user, currentUser)) {
                 this.users.push(user);

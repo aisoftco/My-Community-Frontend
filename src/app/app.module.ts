@@ -1,6 +1,6 @@
 import { EditChatRoomPage } from './../pages/edit-chat-room/edit-chat-room';
 import { Geolocation } from '@ionic-native/geolocation';
-import { HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -18,7 +18,6 @@ import { SignupPage } from '../pages/signup/signup';
 import { ThanksPage } from '../pages/thanks/thanks';
 import { DireccionPage } from '../pages/direccion/direccion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainPage } from './../pages/main/main';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { AngularFireModule } from '@angular/fire';
@@ -34,9 +33,11 @@ import { GeolocationControlProvider } from '../providers/geolocation-control/geo
 import { ChatProvider } from '../providers/chat/chat';
 import { EventProvider } from '../providers/event/event';
 
+import { Facebook } from '@ionic-native/facebook';
+
 export const firebaseConfig = {
   apiKey: 'AIzaSyDHaK1C-4k5GbGTux_zksWuiON_X8EEsMU',
-  authDomain: 'my-community-b9a96.firebaseapp.com',
+  authDomain: 'my-community-movil.firebaseapp.com',
   databaseURL: 'https://my-community-b9a96.firebaseio.com',
   projectId: 'my-community-b9a96',
   storageBucket: 'my-community-b9a96.appspot.com',
@@ -58,6 +59,7 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
@@ -78,7 +80,6 @@ export const firebaseConfig = {
   ],
   providers: [
     HttpClient,
-    HttpHandler,
     StatusBar,
     //Importando GeoLocation
     Geolocation,

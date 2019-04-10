@@ -1,3 +1,4 @@
+import { Message } from './../../interfaces/message.interface';
 import { ChatProvider } from './../../providers/chat/chat';
 import { ChatPage } from './../chat/chat';
 import { Component } from '@angular/core';
@@ -45,7 +46,7 @@ export class ChatPrivatePage {
         data => {
           this.messages = [];
           if (data) {
-            data.forEach(message => {
+            data.forEach((message: Message) => {
               if (message.uid == this.currentuser.uid) {
                 message.clase = 'self';
               } else {

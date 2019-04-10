@@ -87,6 +87,4 @@
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
     </plugin>
 </widget>
-<edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-   <string>We use your location for full functionality of certain app features.</string>
-</edit-config>
+<widget id="co.ionic.facebook435" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">

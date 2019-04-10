@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from 'rxjs';
 
 /*
   Generated class for the UsersProvider provider.
@@ -32,6 +31,12 @@ export class UserProvider {
   editUser(user) {
     this.providePhoto(user);
     return this.angularFireDatabase.object('/users/' + user.uid).update(user);
+  }
+
+  setGeolocation(userGeolocation) {
+    return this.angularFireDatabase
+      .object('/users/' + userGeolocation.uid)
+      .update(userGeolocation);
   }
 
   providePhoto(user) {

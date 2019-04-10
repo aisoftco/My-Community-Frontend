@@ -8,6 +8,7 @@ import {
   AlertController,
   ToastController
 } from 'ionic-angular';
+import { User } from '../../interfaces/user.interface';
 
 /**
  * Generated class for the ProfilePage page.
@@ -41,10 +42,10 @@ export class ProfilePage {
       this.name = authenticationProvider.getCurrentUser().displayName;
       this.photoURL = '../assets/imgs/man.png';
       this.email = authenticationProvider.getCurrentUser().email;
-      userProvider
+      this.userProvider
         .getUser(authenticationProvider.getCurrentUser().uid)
         .valueChanges()
-        .subscribe(user => {
+        .subscribe((user: User) => {
           this.profession = user.profession;
           this.web = user.web;
           this.hobbie = user.hobbie;

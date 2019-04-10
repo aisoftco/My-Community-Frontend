@@ -2,10 +2,7 @@ import { AuthenticationProvider } from './../providers/authentication/authentica
 import { LoginPage } from './../pages/login/login';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
 @Component({
   templateUrl: 'app.html'
 })
@@ -14,8 +11,6 @@ export class MyApp {
 
   constructor(
     platform: Platform,
-    statusBar: StatusBar,
-    splashScreen: SplashScreen,
     public authenticationProvider: AuthenticationProvider
   ) {
     this.authenticationProvider.getStatus().subscribe(auth => {

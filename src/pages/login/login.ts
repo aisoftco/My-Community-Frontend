@@ -48,7 +48,7 @@ export class LoginPage {
   loginGoogle() {
     this.authenticationProvider
       .loginWithGoogle()
-      .then(data => {
+      .then((data: any) => {
         const user = {
           uid: data.user.uid,
           email: data.user.email,
@@ -69,7 +69,7 @@ export class LoginPage {
   loginFacebook() {
     this.authenticationProvider
       .loginWithFacebook()
-      .then(data => {
+      .then((data: any) => {
         const user = {
           uid: data.user.uid,
           email: data.user.email,

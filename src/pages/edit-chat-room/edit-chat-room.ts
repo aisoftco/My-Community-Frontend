@@ -1,12 +1,10 @@
+import { User } from './../../interfaces/user.interface';
 import { AuthenticationProvider } from './../../providers/authentication/authentication';
 import { UserProvider } from './../../providers/user/user';
-import { GeolocationControlProvider } from './../../providers/geolocation-control/geolocation-control';
 import { ChatProvider } from './../../providers/chat/chat';
 import { ChatPage } from './../chat/chat';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TitleCasePipe } from '@angular/common';
-import { User } from 'firebase';
 
 /**
  * Generated class for the EditChatRoomPage page.
@@ -40,12 +38,12 @@ export class EditChatRoomPage {
       .getUser(this.authenticationProvider.getCurrentUser().uid)
       .valueChanges()
       .subscribe(
-        data => {
+        (userdata: User) => {
           const chat = {
             name: this.name,
             description: this.description,
-            latitude: data.latitude,
-            longitude: data.longitude
+            latitude: userdata.latitude,
+            longitude: userdata.longitude
           };
           this.chatProvider
             .createChat(chat)

@@ -42,7 +42,7 @@ export class SignupPage {
   loginGoogle() {
     this.authenticationProvider
       .loginWithGoogle()
-      .then(data => {
+      .then((data: any) => {
         const user = {
           uid: data.user.uid,
           email: data.user.email,
@@ -63,7 +63,7 @@ export class SignupPage {
   loginFacebook() {
     this.authenticationProvider
       .loginWithFacebook()
-      .then(data => {
+      .then((data: any) => {
         const user = {
           uid: data.user.uid,
           email: data.user.email,

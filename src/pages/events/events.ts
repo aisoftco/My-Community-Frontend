@@ -26,8 +26,8 @@ export class EventsPage {
     private geolocationControlProvider: GeolocationControlProvider,
     private eventProvider: EventProvider
   ) {
-    geolocationControlProvider.updateCurrentuserLocation();
-    eventProvider
+    this.geolocationControlProvider.updateCurrentuserLocation();
+    this.eventProvider
       .getEvents()
       .valueChanges()
       .subscribe(

@@ -28,7 +28,9 @@ export class GeolocationControlProvider {
           latitude: resp.coords.latitude,
           longitude: resp.coords.longitude
         };
-        this.userProvider.editUser(userLocation).catch(error => {});
+        this.userProvider.setGeolocation(userLocation).catch(error => {
+          console.log(error);
+        });
       })
       .catch(error => {});
   }
@@ -59,6 +61,6 @@ export class GeolocationControlProvider {
   }
 
   areNear(other, current) {
-    return this.calculateDistance(other, current) <= 0.05;
+    return this.calculateDistance(other, current) <= 0.1;
   }
 }

@@ -25,13 +25,13 @@ export class AuthenticationProvider {
   }
 
   loginWithGoogle() {
-    return this.angularFireAuth.auth.signInWithPopup(
+    return this.angularFireAuth.auth.signInWithRedirect(
       new firebase.auth.GoogleAuthProvider()
     );
   }
 
   loginWithFacebook() {
-    return this.angularFireAuth.auth.signInWithPopup(
+    return this.angularFireAuth.auth.signInWithRedirect(
       new firebase.auth.FacebookAuthProvider()
     );
   }
