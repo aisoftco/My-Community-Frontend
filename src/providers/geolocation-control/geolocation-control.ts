@@ -1,4 +1,4 @@
-import { Geolocation } from '@ionic-native/geolocation';
+//import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserProvider } from '../user/user';
@@ -14,25 +14,25 @@ import { AuthenticationProvider } from '../authentication/authentication';
 export class GeolocationControlProvider {
   constructor(
     public http: HttpClient,
-    private geolocation: Geolocation,
+    // private geolocation: Geolocation,
     private userProvider: UserProvider,
     private authenticationProvider: AuthenticationProvider
   ) {}
 
   updateCurrentuserLocation() {
-    this.geolocation
-      .getCurrentPosition()
-      .then(resp => {
-        const userLocation = {
-          uid: this.authenticationProvider.getCurrentUser().uid,
-          latitude: resp.coords.latitude,
-          longitude: resp.coords.longitude
-        };
-        this.userProvider.setGeolocation(userLocation).catch(error => {
-          console.log(error);
-        });
-      })
-      .catch(error => {});
+    // this.geolocation
+    //   .getCurrentPosition()
+    //   .then(resp => {
+    //     const userLocation = {
+    //       uid: this.authenticationProvider.getCurrentUser().uid,
+    //       latitude: resp.coords.latitude,
+    //       longitude: resp.coords.longitude
+    //     };
+    //     this.userProvider.setGeolocation(userLocation).catch(error => {
+    //       console.log(error);
+    //     });
+    //   })
+    //   .catch(error => {});
   }
 
   calculateDistance(other, current) {

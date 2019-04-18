@@ -1,5 +1,5 @@
 import { EditChatRoomPage } from './../pages/edit-chat-room/edit-chat-room';
-import { Geolocation } from '@ionic-native/geolocation';
+// import { Geolocation } from '@ionic-native/geolocation';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -32,8 +32,6 @@ import { UserProvider } from '../providers/user/user';
 import { GeolocationControlProvider } from '../providers/geolocation-control/geolocation-control';
 import { ChatProvider } from '../providers/chat/chat';
 import { EventProvider } from '../providers/event/event';
-
-import { Facebook } from '@ionic-native/facebook';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDHaK1C-4k5GbGTux_zksWuiON_X8EEsMU',
@@ -82,7 +80,7 @@ export const firebaseConfig = {
     HttpClient,
     StatusBar,
     //Importando GeoLocation
-    Geolocation,
+    // Geolocation,
     SplashScreen,
     AngularFireDatabase,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
